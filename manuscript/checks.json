@@ -1,0 +1,1354 @@
+{
+  "schema_version": 1,
+  "arithmetic": "exact integers and rational polynomials",
+  "sympy_version": "1.14.0",
+  "symbolic": {
+    "factorizations": [
+      {
+        "e": 1,
+        "factorization": "(t - 2)*(t - 1)*(t + 1)*(t**2 + 2*t - 1)"
+      },
+      {
+        "e": -1,
+        "factorization": "-(t - 1)*(t + 1)*(t + 2)*(t**2 - 2*t - 1)"
+      }
+    ],
+    "singular_systems": [
+      {
+        "r_mod_6": 0,
+        "e": 1,
+        "t": 1,
+        "symmetric_dimension": 0
+      },
+      {
+        "r_mod_6": 0,
+        "e": 1,
+        "t": -1,
+        "symmetric_dimension": 1
+      },
+      {
+        "r_mod_6": 0,
+        "e": -1,
+        "t": 1,
+        "symmetric_dimension": 0
+      },
+      {
+        "r_mod_6": 0,
+        "e": -1,
+        "t": -1,
+        "symmetric_dimension": 1
+      },
+      {
+        "r_mod_6": 1,
+        "e": 1,
+        "t": 1,
+        "symmetric_dimension": 0
+      },
+      {
+        "r_mod_6": 1,
+        "e": 1,
+        "t": -1,
+        "symmetric_dimension": 1
+      },
+      {
+        "r_mod_6": 1,
+        "e": -1,
+        "t": 1,
+        "symmetric_dimension": 1
+      },
+      {
+        "r_mod_6": 1,
+        "e": -1,
+        "t": -1,
+        "symmetric_dimension": 0
+      },
+      {
+        "r_mod_6": 2,
+        "e": 1,
+        "t": 1,
+        "symmetric_dimension": 0
+      },
+      {
+        "r_mod_6": 2,
+        "e": 1,
+        "t": -1,
+        "symmetric_dimension": 0
+      },
+      {
+        "r_mod_6": 2,
+        "e": -1,
+        "t": 1,
+        "symmetric_dimension": 0
+      },
+      {
+        "r_mod_6": 2,
+        "e": -1,
+        "t": -1,
+        "symmetric_dimension": 0
+      },
+      {
+        "r_mod_6": 3,
+        "e": 1,
+        "t": 1,
+        "symmetric_dimension": 1
+      },
+      {
+        "r_mod_6": 3,
+        "e": 1,
+        "t": -1,
+        "symmetric_dimension": 1
+      },
+      {
+        "r_mod_6": 3,
+        "e": -1,
+        "t": 1,
+        "symmetric_dimension": 1
+      },
+      {
+        "r_mod_6": 3,
+        "e": -1,
+        "t": -1,
+        "symmetric_dimension": 1
+      },
+      {
+        "r_mod_6": 4,
+        "e": 1,
+        "t": 1,
+        "symmetric_dimension": 1
+      },
+      {
+        "r_mod_6": 4,
+        "e": 1,
+        "t": -1,
+        "symmetric_dimension": 1
+      },
+      {
+        "r_mod_6": 4,
+        "e": -1,
+        "t": 1,
+        "symmetric_dimension": 0
+      },
+      {
+        "r_mod_6": 4,
+        "e": -1,
+        "t": -1,
+        "symmetric_dimension": 0
+      },
+      {
+        "r_mod_6": 5,
+        "e": 1,
+        "t": 1,
+        "symmetric_dimension": 0
+      },
+      {
+        "r_mod_6": 5,
+        "e": 1,
+        "t": -1,
+        "symmetric_dimension": 0
+      },
+      {
+        "r_mod_6": 5,
+        "e": -1,
+        "t": 1,
+        "symmetric_dimension": 0
+      },
+      {
+        "r_mod_6": 5,
+        "e": -1,
+        "t": -1,
+        "symmetric_dimension": 0
+      }
+    ]
+  },
+  "finite_scope": "Every integer r from 2 through 40; includes k = 1,...,6 in r = 6k+4.",
+  "cases": [
+    {
+      "r": 2,
+      "vertices": 7,
+      "edges": 8,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 1,
+      "laplacian_repeated_eigenvalues": [
+        "3-sqrt(2)",
+        "3+sqrt(2)"
+      ],
+      "signless_repeated_eigenvalues": [],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "z**2 - 6*z + 7",
+      "gcd_chi_Q_derivative": "1"
+    },
+    {
+      "r": 3,
+      "vertices": 8,
+      "edges": 9,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 3,
+      "resolving_set_vertex_indices": [
+        0,
+        2,
+        4
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 2,
+      "laplacian_repeated_eigenvalues": [
+        1,
+        3
+      ],
+      "signless_repeated_eigenvalues": [
+        1,
+        3
+      ],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "z**2 - 4*z + 3",
+      "gcd_chi_Q_derivative": "z**2 - 4*z + 3"
+    },
+    {
+      "r": 4,
+      "vertices": 9,
+      "edges": 10,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 1,
+      "laplacian_repeated_eigenvalues": [
+        1,
+        3
+      ],
+      "signless_repeated_eigenvalues": [],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "z**2 - 4*z + 3",
+      "gcd_chi_Q_derivative": "1"
+    },
+    {
+      "r": 5,
+      "vertices": 10,
+      "edges": 11,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 3,
+      "resolving_set_vertex_indices": [
+        0,
+        1,
+        2
+      ],
+      "maximum_laplacian_multiplicity": 1,
+      "maximum_signless_multiplicity": 1,
+      "laplacian_repeated_eigenvalues": [],
+      "signless_repeated_eigenvalues": [],
+      "signless_multiplicity_at_2": 1,
+      "gcd_chi_L_derivative": "1",
+      "gcd_chi_Q_derivative": "1"
+    },
+    {
+      "r": 6,
+      "vertices": 11,
+      "edges": 12,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 2,
+      "laplacian_repeated_eigenvalues": [
+        3
+      ],
+      "signless_repeated_eigenvalues": [
+        1
+      ],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "z - 3",
+      "gcd_chi_Q_derivative": "z - 1"
+    },
+    {
+      "r": 7,
+      "vertices": 12,
+      "edges": 13,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 2,
+      "laplacian_repeated_eigenvalues": [
+        3
+      ],
+      "signless_repeated_eigenvalues": [
+        3
+      ],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "z - 3",
+      "gcd_chi_Q_derivative": "z - 3"
+    },
+    {
+      "r": 8,
+      "vertices": 13,
+      "edges": 14,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 1,
+      "maximum_signless_multiplicity": 1,
+      "laplacian_repeated_eigenvalues": [],
+      "signless_repeated_eigenvalues": [],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "1",
+      "gcd_chi_Q_derivative": "1"
+    },
+    {
+      "r": 9,
+      "vertices": 14,
+      "edges": 15,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 2,
+      "laplacian_repeated_eigenvalues": [
+        1,
+        3
+      ],
+      "signless_repeated_eigenvalues": [
+        1,
+        3
+      ],
+      "signless_multiplicity_at_2": 1,
+      "gcd_chi_L_derivative": "z**2 - 4*z + 3",
+      "gcd_chi_Q_derivative": "z**2 - 4*z + 3"
+    },
+    {
+      "r": 10,
+      "vertices": 15,
+      "edges": 16,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 1,
+      "laplacian_repeated_eigenvalues": [
+        1,
+        3
+      ],
+      "signless_repeated_eigenvalues": [],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "z**2 - 4*z + 3",
+      "gcd_chi_Q_derivative": "1"
+    },
+    {
+      "r": 11,
+      "vertices": 16,
+      "edges": 17,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 1,
+      "maximum_signless_multiplicity": 1,
+      "laplacian_repeated_eigenvalues": [],
+      "signless_repeated_eigenvalues": [],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "1",
+      "gcd_chi_Q_derivative": "1"
+    },
+    {
+      "r": 12,
+      "vertices": 17,
+      "edges": 18,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 2,
+      "laplacian_repeated_eigenvalues": [
+        3
+      ],
+      "signless_repeated_eigenvalues": [
+        1
+      ],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "z - 3",
+      "gcd_chi_Q_derivative": "z - 1"
+    },
+    {
+      "r": 13,
+      "vertices": 18,
+      "edges": 19,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 2,
+      "laplacian_repeated_eigenvalues": [
+        3
+      ],
+      "signless_repeated_eigenvalues": [
+        3
+      ],
+      "signless_multiplicity_at_2": 1,
+      "gcd_chi_L_derivative": "z - 3",
+      "gcd_chi_Q_derivative": "z - 3"
+    },
+    {
+      "r": 14,
+      "vertices": 19,
+      "edges": 20,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 1,
+      "maximum_signless_multiplicity": 1,
+      "laplacian_repeated_eigenvalues": [],
+      "signless_repeated_eigenvalues": [],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "1",
+      "gcd_chi_Q_derivative": "1"
+    },
+    {
+      "r": 15,
+      "vertices": 20,
+      "edges": 21,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 2,
+      "laplacian_repeated_eigenvalues": [
+        1,
+        3
+      ],
+      "signless_repeated_eigenvalues": [
+        1,
+        3
+      ],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "z**2 - 4*z + 3",
+      "gcd_chi_Q_derivative": "z**2 - 4*z + 3"
+    },
+    {
+      "r": 16,
+      "vertices": 21,
+      "edges": 22,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 1,
+      "laplacian_repeated_eigenvalues": [
+        1,
+        3
+      ],
+      "signless_repeated_eigenvalues": [],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "z**2 - 4*z + 3",
+      "gcd_chi_Q_derivative": "1"
+    },
+    {
+      "r": 17,
+      "vertices": 22,
+      "edges": 23,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 1,
+      "maximum_signless_multiplicity": 1,
+      "laplacian_repeated_eigenvalues": [],
+      "signless_repeated_eigenvalues": [],
+      "signless_multiplicity_at_2": 1,
+      "gcd_chi_L_derivative": "1",
+      "gcd_chi_Q_derivative": "1"
+    },
+    {
+      "r": 18,
+      "vertices": 23,
+      "edges": 24,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 2,
+      "laplacian_repeated_eigenvalues": [
+        3
+      ],
+      "signless_repeated_eigenvalues": [
+        1
+      ],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "z - 3",
+      "gcd_chi_Q_derivative": "z - 1"
+    },
+    {
+      "r": 19,
+      "vertices": 24,
+      "edges": 25,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 2,
+      "laplacian_repeated_eigenvalues": [
+        3
+      ],
+      "signless_repeated_eigenvalues": [
+        3
+      ],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "z - 3",
+      "gcd_chi_Q_derivative": "z - 3"
+    },
+    {
+      "r": 20,
+      "vertices": 25,
+      "edges": 26,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 1,
+      "maximum_signless_multiplicity": 1,
+      "laplacian_repeated_eigenvalues": [],
+      "signless_repeated_eigenvalues": [],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "1",
+      "gcd_chi_Q_derivative": "1"
+    },
+    {
+      "r": 21,
+      "vertices": 26,
+      "edges": 27,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 2,
+      "laplacian_repeated_eigenvalues": [
+        1,
+        3
+      ],
+      "signless_repeated_eigenvalues": [
+        1,
+        3
+      ],
+      "signless_multiplicity_at_2": 1,
+      "gcd_chi_L_derivative": "z**2 - 4*z + 3",
+      "gcd_chi_Q_derivative": "z**2 - 4*z + 3"
+    },
+    {
+      "r": 22,
+      "vertices": 27,
+      "edges": 28,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 1,
+      "laplacian_repeated_eigenvalues": [
+        1,
+        3
+      ],
+      "signless_repeated_eigenvalues": [],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "z**2 - 4*z + 3",
+      "gcd_chi_Q_derivative": "1"
+    },
+    {
+      "r": 23,
+      "vertices": 28,
+      "edges": 29,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 1,
+      "maximum_signless_multiplicity": 1,
+      "laplacian_repeated_eigenvalues": [],
+      "signless_repeated_eigenvalues": [],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "1",
+      "gcd_chi_Q_derivative": "1"
+    },
+    {
+      "r": 24,
+      "vertices": 29,
+      "edges": 30,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 2,
+      "laplacian_repeated_eigenvalues": [
+        3
+      ],
+      "signless_repeated_eigenvalues": [
+        1
+      ],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "z - 3",
+      "gcd_chi_Q_derivative": "z - 1"
+    },
+    {
+      "r": 25,
+      "vertices": 30,
+      "edges": 31,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 2,
+      "laplacian_repeated_eigenvalues": [
+        3
+      ],
+      "signless_repeated_eigenvalues": [
+        3
+      ],
+      "signless_multiplicity_at_2": 1,
+      "gcd_chi_L_derivative": "z - 3",
+      "gcd_chi_Q_derivative": "z - 3"
+    },
+    {
+      "r": 26,
+      "vertices": 31,
+      "edges": 32,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 1,
+      "maximum_signless_multiplicity": 1,
+      "laplacian_repeated_eigenvalues": [],
+      "signless_repeated_eigenvalues": [],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "1",
+      "gcd_chi_Q_derivative": "1"
+    },
+    {
+      "r": 27,
+      "vertices": 32,
+      "edges": 33,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 2,
+      "laplacian_repeated_eigenvalues": [
+        1,
+        3
+      ],
+      "signless_repeated_eigenvalues": [
+        1,
+        3
+      ],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "z**2 - 4*z + 3",
+      "gcd_chi_Q_derivative": "z**2 - 4*z + 3"
+    },
+    {
+      "r": 28,
+      "vertices": 33,
+      "edges": 34,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 1,
+      "laplacian_repeated_eigenvalues": [
+        1,
+        3
+      ],
+      "signless_repeated_eigenvalues": [],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "z**2 - 4*z + 3",
+      "gcd_chi_Q_derivative": "1"
+    },
+    {
+      "r": 29,
+      "vertices": 34,
+      "edges": 35,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 1,
+      "maximum_signless_multiplicity": 1,
+      "laplacian_repeated_eigenvalues": [],
+      "signless_repeated_eigenvalues": [],
+      "signless_multiplicity_at_2": 1,
+      "gcd_chi_L_derivative": "1",
+      "gcd_chi_Q_derivative": "1"
+    },
+    {
+      "r": 30,
+      "vertices": 35,
+      "edges": 36,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 2,
+      "laplacian_repeated_eigenvalues": [
+        3
+      ],
+      "signless_repeated_eigenvalues": [
+        1
+      ],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "z - 3",
+      "gcd_chi_Q_derivative": "z - 1"
+    },
+    {
+      "r": 31,
+      "vertices": 36,
+      "edges": 37,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 2,
+      "laplacian_repeated_eigenvalues": [
+        3
+      ],
+      "signless_repeated_eigenvalues": [
+        3
+      ],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "z - 3",
+      "gcd_chi_Q_derivative": "z - 3"
+    },
+    {
+      "r": 32,
+      "vertices": 37,
+      "edges": 38,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 1,
+      "maximum_signless_multiplicity": 1,
+      "laplacian_repeated_eigenvalues": [],
+      "signless_repeated_eigenvalues": [],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "1",
+      "gcd_chi_Q_derivative": "1"
+    },
+    {
+      "r": 33,
+      "vertices": 38,
+      "edges": 39,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 2,
+      "laplacian_repeated_eigenvalues": [
+        1,
+        3
+      ],
+      "signless_repeated_eigenvalues": [
+        1,
+        3
+      ],
+      "signless_multiplicity_at_2": 1,
+      "gcd_chi_L_derivative": "z**2 - 4*z + 3",
+      "gcd_chi_Q_derivative": "z**2 - 4*z + 3"
+    },
+    {
+      "r": 34,
+      "vertices": 39,
+      "edges": 40,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 1,
+      "laplacian_repeated_eigenvalues": [
+        1,
+        3
+      ],
+      "signless_repeated_eigenvalues": [],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "z**2 - 4*z + 3",
+      "gcd_chi_Q_derivative": "1"
+    },
+    {
+      "r": 35,
+      "vertices": 40,
+      "edges": 41,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 1,
+      "maximum_signless_multiplicity": 1,
+      "laplacian_repeated_eigenvalues": [],
+      "signless_repeated_eigenvalues": [],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "1",
+      "gcd_chi_Q_derivative": "1"
+    },
+    {
+      "r": 36,
+      "vertices": 41,
+      "edges": 42,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 2,
+      "laplacian_repeated_eigenvalues": [
+        3
+      ],
+      "signless_repeated_eigenvalues": [
+        1
+      ],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "z - 3",
+      "gcd_chi_Q_derivative": "z - 1"
+    },
+    {
+      "r": 37,
+      "vertices": 42,
+      "edges": 43,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 2,
+      "laplacian_repeated_eigenvalues": [
+        3
+      ],
+      "signless_repeated_eigenvalues": [
+        3
+      ],
+      "signless_multiplicity_at_2": 1,
+      "gcd_chi_L_derivative": "z - 3",
+      "gcd_chi_Q_derivative": "z - 3"
+    },
+    {
+      "r": 38,
+      "vertices": 43,
+      "edges": 44,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 1,
+      "maximum_signless_multiplicity": 1,
+      "laplacian_repeated_eigenvalues": [],
+      "signless_repeated_eigenvalues": [],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "1",
+      "gcd_chi_Q_derivative": "1"
+    },
+    {
+      "r": 39,
+      "vertices": 44,
+      "edges": 45,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 2,
+      "laplacian_repeated_eigenvalues": [
+        1,
+        3
+      ],
+      "signless_repeated_eigenvalues": [
+        1,
+        3
+      ],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "z**2 - 4*z + 3",
+      "gcd_chi_Q_derivative": "z**2 - 4*z + 3"
+    },
+    {
+      "r": 40,
+      "vertices": 45,
+      "edges": 46,
+      "connected": true,
+      "twin_free": true,
+      "metric_dimension": 2,
+      "resolving_set_vertex_indices": [
+        2,
+        6
+      ],
+      "maximum_laplacian_multiplicity": 2,
+      "maximum_signless_multiplicity": 1,
+      "laplacian_repeated_eigenvalues": [
+        1,
+        3
+      ],
+      "signless_repeated_eigenvalues": [],
+      "signless_multiplicity_at_2": 0,
+      "gcd_chi_L_derivative": "z**2 - 4*z + 3",
+      "gcd_chi_Q_derivative": "1"
+    }
+  ],
+  "rooted_paths": [
+    {
+      "base": "K133",
+      "path_edges": 1,
+      "order": 14,
+      "resolving_set": [
+        8,
+        9,
+        11,
+        12
+      ],
+      "metric_dimension": 4,
+      "metric_lower_bound": "Projection to the base and its twin classes.",
+      "outside_base_profiles": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2,
+          2
+        ]
+      ],
+      "spectra": {
+        "L": {
+          "characteristic_factors": "z*(z - 2)*(z**2 - 9*z + 7)**2*(z**2 - 6*z + 4)**4",
+          "maximum_multiplicity": 4
+        },
+        "Q": {
+          "characteristic_factors": "(z**2 - 11*z + 9)*(z**2 - 6*z + 4)**5*(z**2 - 3*z + 1)",
+          "maximum_multiplicity": 5
+        }
+      }
+    },
+    {
+      "base": "K133",
+      "path_edges": 2,
+      "order": 21,
+      "resolving_set": [
+        10,
+        12,
+        16,
+        18
+      ],
+      "metric_dimension": 4,
+      "metric_lower_bound": "Projection to the base and its twin classes.",
+      "outside_base_profiles": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2,
+          2
+        ]
+      ],
+      "spectra": {
+        "L": {
+          "characteristic_factors": "z*(z - 3)*(z - 1)*(z**3 - 11*z**2 + 24*z - 7)**2*(z**3 - 8*z**2 + 15*z - 4)**4",
+          "maximum_multiplicity": 4
+        },
+        "Q": {
+          "characteristic_factors": "(z**3 - 13*z**2 + 30*z - 9)*(z**3 - 8*z**2 + 15*z - 4)**5*(z**3 - 5*z**2 + 6*z - 1)",
+          "maximum_multiplicity": 5
+        }
+      }
+    },
+    {
+      "base": "K133",
+      "path_edges": 3,
+      "order": 28,
+      "resolving_set": [
+        12,
+        15,
+        21,
+        24
+      ],
+      "metric_dimension": 4,
+      "metric_lower_bound": "Projection to the base and its twin classes.",
+      "outside_base_profiles": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2,
+          2
+        ]
+      ],
+      "spectra": {
+        "L": {
+          "characteristic_factors": "z*(z - 2)*(z**2 - 4*z + 2)*(z**4 - 13*z**3 + 45*z**2 - 46*z + 7)**2*(z**4 - 10*z**3 + 30*z**2 - 28*z + 4)**4",
+          "maximum_multiplicity": 4
+        },
+        "Q": {
+          "characteristic_factors": "(z - 1)*(z**3 - 6*z**2 + 9*z - 1)*(z**4 - 15*z**3 + 55*z**2 - 58*z + 9)*(z**4 - 10*z**3 + 30*z**2 - 28*z + 4)**5",
+          "maximum_multiplicity": 5
+        }
+      }
+    },
+    {
+      "base": "K133",
+      "path_edges": 4,
+      "order": 35,
+      "resolving_set": [
+        14,
+        18,
+        26,
+        30
+      ],
+      "metric_dimension": 4,
+      "metric_lower_bound": "Projection to the base and its twin classes.",
+      "outside_base_profiles": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2,
+          2
+        ]
+      ],
+      "spectra": {
+        "L": {
+          "characteristic_factors": "z*(z**2 - 5*z + 5)*(z**2 - 3*z + 1)*(z**5 - 15*z**4 + 70*z**3 - 125*z**2 + 75*z - 7)**2*(z**5 - 12*z**4 + 49*z**3 - 80*z**2 + 45*z - 4)**4",
+          "maximum_multiplicity": 4
+        },
+        "Q": {
+          "characteristic_factors": "(z**5 - 17*z**4 + 84*z**3 - 155*z**2 + 95*z - 9)*(z**5 - 12*z**4 + 49*z**3 - 80*z**2 + 45*z - 4)**5*(z**5 - 9*z**4 + 28*z**3 - 35*z**2 + 15*z - 1)",
+          "maximum_multiplicity": 5
+        }
+      }
+    },
+    {
+      "base": "K2_join_2K2",
+      "path_edges": 1,
+      "order": 12,
+      "resolving_set": [
+        6,
+        8,
+        10
+      ],
+      "metric_dimension": 3,
+      "metric_lower_bound": "Projection to the base and its twin classes.",
+      "outside_base_profiles": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ],
+      "spectra": {
+        "L": {
+          "characteristic_factors": "z*(z - 2)*(z**2 - 8*z + 6)**2*(z**2 - 6*z + 4)**2*(z**2 - 4*z + 2)",
+          "maximum_multiplicity": 2
+        },
+        "Q": {
+          "characteristic_factors": "(z**2 - 10*z + 8)*(z**2 - 6*z + 4)**2*(z**2 - 4*z + 2)**3",
+          "maximum_multiplicity": 3
+        }
+      }
+    },
+    {
+      "base": "K2_join_2K2",
+      "path_edges": 2,
+      "order": 18,
+      "resolving_set": [
+        7,
+        11,
+        15
+      ],
+      "metric_dimension": 3,
+      "metric_lower_bound": "Projection to the base and its twin classes.",
+      "outside_base_profiles": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ],
+      "spectra": {
+        "L": {
+          "characteristic_factors": "z*(z - 3)*(z - 2)*(z - 1)*(z**2 - 4*z + 1)*(z**3 - 10*z**2 + 21*z - 6)**2*(z**3 - 8*z**2 + 15*z - 4)**2",
+          "maximum_multiplicity": 2
+        },
+        "Q": {
+          "characteristic_factors": "(z - 2)**3*(z**2 - 4*z + 1)**3*(z**3 - 12*z**2 + 27*z - 8)*(z**3 - 8*z**2 + 15*z - 4)**2",
+          "maximum_multiplicity": 3
+        }
+      }
+    },
+    {
+      "base": "K2_join_2K2",
+      "path_edges": 3,
+      "order": 24,
+      "resolving_set": [
+        8,
+        14,
+        20
+      ],
+      "metric_dimension": 3,
+      "metric_lower_bound": "Projection to the base and its twin classes.",
+      "outside_base_profiles": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ],
+      "spectra": {
+        "L": {
+          "characteristic_factors": "z*(z - 2)*(z**2 - 4*z + 2)*(z**4 - 12*z**3 + 40*z**2 - 40*z + 6)**2*(z**4 - 10*z**3 + 30*z**2 - 28*z + 4)**2*(z**4 - 8*z**3 + 20*z**2 - 16*z + 2)",
+          "maximum_multiplicity": 2
+        },
+        "Q": {
+          "characteristic_factors": "(z**4 - 14*z**3 + 50*z**2 - 52*z + 8)*(z**4 - 10*z**3 + 30*z**2 - 28*z + 4)**2*(z**4 - 8*z**3 + 20*z**2 - 16*z + 2)**3",
+          "maximum_multiplicity": 3
+        }
+      }
+    },
+    {
+      "base": "K2_join_2K2",
+      "path_edges": 4,
+      "order": 30,
+      "resolving_set": [
+        9,
+        17,
+        25
+      ],
+      "metric_dimension": 3,
+      "metric_lower_bound": "Projection to the base and its twin classes.",
+      "outside_base_profiles": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ],
+      "spectra": {
+        "L": {
+          "characteristic_factors": "z*(z - 2)*(z**2 - 5*z + 5)*(z**2 - 3*z + 1)*(z**4 - 8*z**3 + 19*z**2 - 12*z + 1)*(z**5 - 14*z**4 + 63*z**3 - 110*z**2 + 65*z - 6)**2*(z**5 - 12*z**4 + 49*z**3 - 80*z**2 + 45*z - 4)**2",
+          "maximum_multiplicity": 2
+        },
+        "Q": {
+          "characteristic_factors": "(z - 2)**3*(z**4 - 8*z**3 + 19*z**2 - 12*z + 1)**3*(z**5 - 16*z**4 + 77*z**3 - 140*z**2 + 85*z - 8)*(z**5 - 12*z**4 + 49*z**3 - 80*z**2 + 45*z - 4)**2",
+          "maximum_multiplicity": 3
+        }
+      }
+    }
+  ],
+  "coverage": "Symbolic identities, all 24 singular systems, exceptional length-two factors, 39 theta graphs and eight rooted-path graphs; the all-parameter statements have written proofs in note.tex."
+}

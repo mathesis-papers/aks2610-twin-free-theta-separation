@@ -1,0 +1,62 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 110097,
+      "matches_public": null,
+      "path": "paper.pdf",
+      "public_sha256": null,
+      "sha256": "503b4046d6a4750b9f8538ced6949d05086fb5b1f1d22bed5edd3b260e0a38d1"
+    },
+    "source": {
+      "bytes": 22922,
+      "matches_public": null,
+      "path": "source.archive",
+      "public_sha256": null,
+      "sha256": "52a9dcd04c04e876fb58da92a213e37f6ed3c33388b8e70382c2c374fbdfca90"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "We answer Problem 30 in Section 9 (p. 27) of Alfuraidan, Khan and Sauras-Altuzarra, Metric dimension and maximum eigenvalue multiplicity of graph Laplacians, arXiv:2610.26875v1, and extend the metric-dimension classification of Knor, Sedlar and Škrekovski (2022) to a classification of both maximum spectral multiplicities for Theta(3,3,r), for every r >= 2. For every integer k >= 1, the theta graph with edge lengths 3, 3, 6k+4 is connected and twin-free, has metric dimension and maximum Laplacian eigenvalue multiplicity two, and has simple signless spectrum. Its only repeated Laplacian eigenvalues are 1 and 3, each double. Distinct orders give pairwise nonisomorphic examples. For r >= 3, repeated eigenvalues are classified modulo six; r = 2 has a separate quadratic repeated factor. Attaching an equal pendant path at every vertex of two known base graphs also gives twin-free infinite families in both separation directions.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 2,
+    "doi": null,
+    "lean_source": {
+      "revision": "d9bb8a406783c5222849b798f3c2ab738f653d75",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/d9bb8a406783c5222849b798f3c2ab738f653d75/D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaSeparation.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "url": "/api/v1/collected-papers/aks2610-twin-free-theta-separation/files/pdf?version=2"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-14T17:17:08.187879261Z",
+    "record": "aks2610-twin-free-theta-separation",
+    "repository_name": "aks2610-twin-free-theta-separation",
+    "source": {
+      "url": "/api/v1/collected-papers/aks2610-twin-free-theta-separation/files/source?version=2"
+    },
+    "title": "A twin-free answer to Alfuraidan–Khan–Sauras-Altuzarra, arXiv:2610.26875v1, Section 9, Problem 30 (p. 27): a spectral extension of Knor–Sedlar–Škrekovski (2022)",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-14T17:17:08.187879261Z",
+        "revision": "2",
+        "version": 2
+      }
+    ],
+    "work": "aks2610-twin-free-theta-separation"
+  }
+}

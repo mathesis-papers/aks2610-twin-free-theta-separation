@@ -1,0 +1,639 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[colorlinks=true,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\mm}{\operatorname{mm}}
+\newcommand{\Th}{\Theta}
+\title{A twin-free answer to Alfuraidan--Khan--Sauras-Altuzarra,\\
+arXiv:2610.26875v1, Section 9, Problem 30 (p.~27):\\
+a spectral extension of Knor--Sedlar--\v{S}krekovski (2022)}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\\small ChronoAI Pte Ltd, Singapore}
+\date{5 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We answer Problem 30 in Section 9 (p.~27) of
+Alfuraidan, Khan and Sauras-Altuzarra, \emph{Metric dimension and maximum
+eigenvalue multiplicity of graph Laplacians},\linebreak arXiv:2610.26875v1,
+and extend the metric-dimension classification of Knor, Sedlar and
+\v{S}krekovski (2022) to a classification of both maximum spectral
+multiplicities for $\Th_{3,3,r}$, for every $r\geq2$.
+For every integer $k\geq1$, the theta graph $G_k=\Th_{3,3,6k+4}$ is connected
+and twin-free, and satisfies
+$\dim(G_k)=\mm_L(G_k)=2$ and $\mm_Q(G_k)=1$.
+Its only repeated Laplacian eigenvalues are $1$ and $3$, each of multiplicity
+two. The proof gives an explicit resolving pair and reduces spectral
+multiplicities to a second-order recurrence. Distinct graph orders give
+pairwise nonisomorphic examples. More generally, both maximum multiplicities
+of $\Th_{3,3,r}$ for $r\geq3$ are classified by $r$ modulo six;
+the length-two case has a separate quadratic repeated factor.
+Attaching an equal pendant path at every vertex of two known base graphs
+also gives twin-free infinite families in both separation directions.
+\end{abstract}
+
+\section{The family and the question}
+For a graph $G$ with adjacency matrix $A$ and diagonal degree matrix $D$, put
+$L=D-A$ and $Q=D+A$. Write $\mm_X(G)$ for the largest eigenvalue
+multiplicity of $X$, not the multiplicity of its largest eigenvalue.
+A set of vertices resolves $G$ if the distances to its members distinguish
+all vertices; $\dim(G)$ is the smallest size of such a set.
+Two distinct vertices $u,v$ are twins when
+$N(u)\setminus\{v\}=N(v)\setminus\{u\}$.
+
+Under the heading ``Open Problems'', Problem 30 of
+\cite[Section~9, p.~27]{AKS} asks ``Do there exist infinite families''
+of connected twin-free graphs for which exactly one equality holds.
+We answer this question affirmatively by constructing connected twin-free
+families for which exactly one of $\mm_L=\dim$ and $\mm_Q=\dim$ holds.
+The families $\Th_{2,2,r}$ studied in \cite[Theorem~25 and Corollary~26]{AKS}
+have twins. Here $\Th_{p,q,r}$ has three internally disjoint paths of
+\emph{edge lengths} $p,q,r$ between two terminals.
+For the metric dimension of general theta graphs see
+Knor, Sedlar and \v{S}krekovski (2022)
+\cite[arXiv version, Theorems~8 and~14, pp.~6 and~10]{KSS}; their result already
+implies the metric-dimension assertion below. We include a distance
+certificate to make the argument self-contained.
+Benakli, Froitzheim and Martinez (2025)
+\cite[Theorem~4.4, p.~11]{BFM} give a later alternative proof of that
+metric classification, using internal-vertex counts rather than edge lengths.
+The additional content is the simultaneous multiplicity classification and
+its twin-free separation consequence. A related exact formula of
+Paone and Paone (2026) \cite[Corollary~8.1, pp.~10--11]{PP}
+determines the multiplicity of the particular signless eigenvalue $2$;
+Corollary~\ref{cor:two} gives its specialization here.
+The six-periodicity at the particular eigenvalues $1,3$ also follows from
+Bahmani and Kiani \cite[Corollary~16 and Example~17, pp.~5--6]{BK}:
+insert six degree-two vertices in an edge of the long path and take
+$n=6$, $k=1,2$ in their reduction formula. This does not exclude a
+repeated eigenvalue elsewhere; Section~3.2 supplies that exclusion.
+Earlier theta characteristic-polynomial formulas appear in
+Liu and Lu \cite[Proposition~2.6 and equations (2.1), (2.3)]{LL},
+with internal-vertex parameters $(r-1,2,2)$.
+
+\begin{theorem}\label{thm:main}
+Let $k\geq1$, $r=6k+4$, and $G=\Th_{3,3,r}$. Then $G$ is connected and
+twin-free, $|V(G)|=r+5$, and
+\[
+ \dim(G)=\mm_L(G)=2,\qquad \mm_Q(G)=1.
+\]
+More precisely, the eigenvalues $1$ and $3$ of $L$ each have multiplicity
+two and all other eigenvalues of $L$ are simple; every eigenvalue of $Q$
+is simple. Consequently these graphs answer Problem 30 in the
+Laplacian-equality direction.
+\end{theorem}
+
+\section{Geometry and a resolving pair}
+Label the short paths $u,a,b,v$ and $u,c,d,v$, and the long path
+$y_0,y_1,\ldots,y_r$, where $y_0=u$, $y_r=v$.
+Connectivity and the order count follow immediately.
+Every cycle uses two complete terminal-to-terminal paths, so its length is
+$6$ or $r+3$. Thus there are no triangles or quadrilaterals.
+Every vertex has degree at least two. Adjacent twins would have a common
+third neighbor and give a triangle; nonadjacent twins would have two
+common neighbors and give a quadrilateral. Hence $G$ is twin-free.
+
+The distance pairs to $(a,y_1)$ at the six named short-path vertices are
+\[
+\begin{array}{c|rrrrrr}
+ x&u&v&a&b&c&d\\\hline
+ (d(x,a),d(x,y_1))&(1,1)&(2,4)&(0,2)&(1,3)&(2,2)&(3,3).
+\end{array}
+\]
+For $1\leq j\leq r-1$ the pair at $y_j$ is
+\begin{equation}\label{eq:distance}
+ \bigl(\min(j+1,r-j+2),\ \min(j-1,r-j+4)\bigr).
+\end{equation}
+Indeed a path from $y_j$ to $a$ must first reach a terminal, giving
+the two candidate lengths $j+1,r-j+2$. A path to $y_1$ either stays
+on the long path or uses a short terminal-to-terminal path of length
+three, giving $j-1,r-j+4$.
+The displayed six pairs follow by the same terminal-path comparison.
+
+Write $r=2h$, so $h\geq5$. Formula \eqref{eq:distance} becomes
+\[
+\begin{cases}
+ (j+1,j-1),&1\leq j\leq h,\\
+ (h+1,h),&j=h+1,\\
+ (h,h+1),&j=h+2,\\
+ (2h-j+2,2h-j+4),&h+3\leq j\leq 2h-1.
+\end{cases}
+\]
+The coordinate differences are respectively $2,1,-1,-2$.
+Each outer range is injective. The middle pairs have coordinates at
+least five, so they are distinct from the six listed pairs.
+With first minus second, the six listed differences are
+$0,-2,-2,-2,0,0$. Thus no listed pair has difference $2$; the listed pairs of difference
+$-2$ are $(2,4),(0,2),(1,3)$, whereas the descending long-path pairs
+have first coordinate at least three. There are no collisions.
+The pair $(a,y_1)$ therefore resolves $G$.
+No single vertex resolves $G$: if distances to a vertex were injective,
+a vertex of degree three could have at most two neighbors. Indeed, each
+neighbor's distance differs from its own by at most one; equality is
+excluded by injectivity, leaving only the values one less and one greater.
+This is a contradiction. Hence $\dim(G)=2$.
+
+\section{The spectral recurrence}
+Treat both matrices at once as $M_e=D-eA$, with $e=1$ for $L$ and
+$e=-1$ for $Q$. For an eigenvalue $\lambda$, put $t=e(2-\lambda)$.
+Swapping the two short paths is an involution commuting with $M_e$.
+The antisymmetric subspace consists of vectors zero on the terminals
+and the long path, with values $(B,C)$ on $(a,b)$ and $(-B,-C)$ on
+$(c,d)$. Its matrix is
+\[
+ \begin{pmatrix}2&-e\\-e&2\end{pmatrix}.
+\]
+Its eigenvalues are $1,3$, each simple, corresponding to $t=1,-1$.
+It remains to bound multiplicities in the symmetric subspace.
+
+For a symmetric eigenvector use values $A,D_0$ at $u,v$, values $B,C$
+on each short path, and values $Y_j$ on the long path. The eigenvalue
+equations are exactly
+\begin{align}
+ tB&=A+C,&tC&=B+D_0,\label{eq:short}\\
+ Y_0&=A,&Y_r&=D_0,\nonumber\\
+ Y_1&=(t+e)A-2B,&Y_{r-1}&=(t+e)D_0-2C,\label{eq:ends}\\
+ Y_{j+1}&=tY_j-Y_{j-1}&&(1\leq j\leq r-1).\label{eq:rec}
+\end{align}
+These equations also suffice for an eigenvector, by checking each
+degree-two row and the two terminal rows.
+
+\subsection{The parameters \texorpdfstring{$t=1,-1$}{t = 1, -1}}
+At $t=1$ the sequence determined by $(Y_0,Y_1)=(A,s)$ is
+\[
+ A,s,s-A,-A,-s,A-s,A,s,\ldots;
+\]
+at $t=-1$ it is
+\[
+ A,s,-A-s,A,s,-A-s,\ldots.
+\]
+Since $r=6k+4$, the pairs $(Y_r,Y_{r-1})$ are respectively
+$(-s,-A)$ and $(s,A)$. Substitution in \eqref{eq:short}--\eqref{eq:ends}
+gives all symmetric solutions in the following table:
+\[
+\begin{array}{cc|ccccc}
+ e&t&A&B&C&D_0&s\\\hline
+ 1&1&A&A/2&-A/2&-A&A\\
+ 1&-1&A&-A/2&-A/2&A&A\\
+ -1&1&0&0&0&0&0\\
+ -1&-1&0&0&0&0&0.
+\end{array}
+\]
+For example, for $t=1$ the short equations give $D_0=-A$ and $B-C=A$;
+the long path gives $s=A$. The two terminal equations give
+$2B=eA$ and $2C=-eA$, so $A=eA$.
+For $t=-1$ they give $D_0=A$, $B+C=-A$, $s=A$ and
+$2B=2C=(e-2)A$, hence $(e-1)A=0$.
+This proves the table, including that every listed row satisfies all
+the equations. The symmetric multiplicity is one for $L$ and zero
+for $Q$ at these parameters.
+
+\subsection{All other parameters}
+Define polynomials $p_0=1$, $p_1=t$, and
+$p_{n+1}=tp_n-p_{n-1}$ for $n\geq1$.
+Induction gives both
+\begin{equation}\label{eq:cont}
+ Y_r=p_{r-1}(t)Y_1-p_{r-2}(t)Y_0,\qquad
+ p_n(t)^2+p_{n+1}(t)^2-tp_n(t)p_{n+1}(t)=1.
+\end{equation}
+For the first identity the initial cases $r=2$ and $r=3$ follow from
+\eqref{eq:rec}; for the second the expression at $n+1$ equals that at
+$n$, and its value at $n=0$ is one.
+
+Suppose now that $q=t^2-1\ne0$. The short-path equations give
+\[
+ qB=tA+D_0,\qquad qC=A+tD_0.
+\]
+Thus $(A,D_0)$ determines $B,C,Y_1$, and then every $Y_j$.
+Writing $P=p_{r-1}(t)$ and $R=p_{r-2}(t)$, the left terminal equation
+and \eqref{eq:cont} imply
+\begin{equation}\label{eq:linear}
+ (q+2P)D_0=\bigl(P((t+e)q-2t)-Rq\bigr)A.
+\end{equation}
+We show that this is a nonzero linear relation on $(A,D_0)$.
+Otherwise
+\[
+ P=-q/2,\qquad R=-\bigl((t+e)q-2t\bigr)/2.
+\]
+Substitution in $R^2+P^2-tRP=1$ gives
+\begin{equation}\label{eq:factor}
+ (t-2e)(t^2-1)(t^2+2et-1)=0.
+\end{equation}
+More explicitly, four times the substituted expression $R^2+P^2-tRP-1$ is
+$e(t-2e)(t^2-1)(t^2+2et-1)$, which also verifies the signs.
+If $t=2e$, the recurrence gives $P=er$, incompatible with $P=-3/2$.
+The remaining possibility is $t^2+2et-1=0$. Reducing the expression
+for $R$ modulo this quadratic gives $R=e$.
+The quadratic is irreducible over $\mathbb Q$, since its roots
+$-e\pm\sqrt2$ are irrational. Hence the rational polynomial
+$p_{r-2}(t)-e$, vanishing at either root, vanishes at both.
+In particular it vanishes at $T=-e(1+\sqrt2)$, where $|T|>2$.
+But for $x>2$ the recurrence implies
+$p_{n+1}(x)>p_n(x)\geq1$ for $n\geq0$, beginning with
+$p_1(x)>p_0(x)=1$; and $p_n(-x)=(-1)^np_n(x)$.
+Since $r-2$ is even and at least two, $p_{r-2}(T)>1$, a contradiction.
+Thus \eqref{eq:linear} is nonzero. The injective endpoint map places
+the symmetric eigenspace in a line in $\mathbb R^2$, so its dimension
+is at most one.
+
+Combining the two invariant subspaces proves all spectral assertions
+of Theorem~\ref{thm:main}. In particular each of $1,3$ has one symmetric
+and one antisymmetric Laplacian eigenvector, while the signless spectrum
+has no repeated eigenvalue. The real spectral theorem ensures that
+eigenspace dimensions equal algebraic multiplicities.
+
+\begin{corollary}
+The graphs $G_k$, $k\geq1$, are pairwise nonisomorphic connected twin-free
+graphs satisfying exactly one of $\mm_L=\dim$ and $\mm_Q=\dim$.
+\end{corollary}
+\begin{proof}
+Their orders $6k+9$ are distinct, and Theorem~\ref{thm:main} gives the
+equalities and inequality.
+\end{proof}
+
+\subsection{The whole subfamily \texorpdfstring{$\Th_{3,3,r}$ for $r\geq6$}{Theta(3,3,r) for r >= 6}}
+\begin{corollary}\label{cor:all-lengths}
+For every integer $r\geq6$, $\Th_{3,3,r}$ is connected and twin-free with
+metric dimension two. Its repeated eigenvalues are exactly those in the
+following table; each listed eigenvalue has multiplicity two, and every
+other eigenvalue is simple.
+\[
+\begin{array}{c|cc|cc}
+ r\bmod6&\text{repeated in }L&\text{repeated in }Q&\mm_L&\mm_Q\\\hline
+ 0&3&1&2&2\\
+ 1&3&3&2&2\\
+ 2&\varnothing&\varnothing&1&1\\
+ 3&1,3&1,3&2&2\\
+ 4&1,3&\varnothing&2&1\\
+ 5&\varnothing&\varnothing&1&1
+\end{array}
+\]
+Thus within this subfamily, both equalities hold in residues $0,1,3$;
+neither holds in residues $2,5$; and only the Laplacian equality holds
+in residue $4$.
+\end{corollary}
+\begin{proof}
+The connectivity and twin argument applies unchanged.
+For even $r=2h\geq6$, the distance proof applies with $h\geq3$;
+the middle pairs have coordinate differences $1,-1$, absent from
+the six short-path pairs.
+If $r=2h+1\geq7$, the six short-path pairs and
+\eqref{eq:distance} remain valid. The long-path pairs are
+$(j+1,j-1)$ for $j\leq h+1$, the single pair $(h+1,h+1)$ at $j=h+2$,
+and $(2h+3-j,2h+5-j)$ for $j\geq h+3$.
+The two outer differences are $2,-2$, and the middle coordinates are
+at least four, so the middle pair differs from $(1,1),(2,2),(3,3)$.
+As before there are no collisions, and the degree-three
+argument excludes a single landmark.
+
+The nonsingular spectral proof did not need $r\equiv4\pmod6$.
+For general $r$, at $t=2e$ its incompatible values are
+$P=e^{r-1}r$ and $P=-3/2$. At the quadratic root $T$, the same growth
+argument gives $|p_{r-2}(T)|>1$, independently of parity. Thus every
+nonsingular symmetric eigenspace still has dimension at most one.
+
+For the singular cases write $s=Y_1$. The short equations reduce to
+\[
+\begin{array}{c|ccc}
+ t&D_0&C&s\\\hline
+ 1&-A&B-A&(1+e)A-2B\\
+ -1&A&-A-B&(e-1)A-2B.
+\end{array}
+\]
+Insert the periodic sequences from Section~3.1 into the two remaining
+conditions $Y_r=D_0$ and $Y_{r-1}=(t+e)D_0-2C$.
+These are two homogeneous equations in $(A,B)$.
+For $t=1$, their coefficient determinants for residues $0,1,2,4,5$
+are respectively
+\[
+8,\quad4(e+1),\quad4e,\quad4(1-e),\quad4(2-e).
+\]
+In residue $3$ the only constraint is $(2e-1)A=0$.
+For $t=-1$, residues $r\equiv0\pmod3$ give the single constraint
+$(2e+1)A=0$; residues $1,2$ have determinants
+$4(1-e),4(e+2)$ respectively.
+Every zero-determinant matrix in this list has a nonzero coefficient
+$2$ or $-2$ of $B$, so its rank is one, not zero.
+It follows that the symmetric eigenspace dimensions are
+\[
+\begin{array}{c|cc|cc}
+ r\bmod6&L:t=1&L:t=-1&Q:t=1&Q:t=-1\\\hline
+ 0&0&1&0&1\\
+ 1&0&1&1&0\\
+ 2&0&0&0&0\\
+ 3&1&1&1&1\\
+ 4&1&1&0&0\\
+ 5&0&0&0&0.
+\end{array}
+\]
+Adding the one-dimensional antisymmetric eigenspace at each singular
+parameter and using $\lambda=2-et$ proves the stated table.
+\end{proof}
+
+\begin{corollary}\label{cor:complete}
+The graphs $\Th_{3,3,r}$ are connected and twin-free for every $r\geq2$.
+Their metric dimension is three for $r=3,5$, and two otherwise.
+The spectral table in Corollary~\ref{cor:all-lengths} holds for every
+$r\geq3$. For $r=2$, the only repeated Laplacian eigenvalues are
+$3-\sqrt2,3+\sqrt2$, both double, and the signless spectrum is simple.
+Consequently exactly one equality holds precisely when
+\[
+ r=2\quad\hbox{or}\quad r\equiv4\pmod6,
+\]
+and in every such case it is the Laplacian equality.
+Both equalities hold precisely for $r\geq6$ with $r\equiv0,1,3\pmod6$.
+Neither holds in the other cases. In particular, no graph of this
+entire subfamily separates in the signless-equality direction.
+\end{corollary}
+\begin{proof}
+All cycle lengths are $6$ or $r+3$, so the twin-freeness argument
+applies for $r\geq2$. The exceptional metric dimensions and all
+remaining metric dimensions follow from
+\cite[arXiv version, Theorems~8 and~14]{KSS}, with edge-length parameters
+$(3,3,r)$: the exceptional multisets are exactly $(3,3,3)$ and $(3,3,5)$.
+For completeness, the distance pairs to $(a,y_1)$ for $r=2$, in vertex
+order $(u,v,a,b,c,d,y_1)$, are
+\[
+(1,1),(2,1),(0,2),(1,2),(2,2),(3,2),(2,0).
+\]
+For $r=4$, in order $(u,v,a,b,c,d,y_1,y_2,y_3)$, they are
+\[
+(1,1),(2,3),(0,2),(1,3),(2,2),(3,3),(2,0),(3,1),(3,2).
+\]
+Each list is injective. The same degree-three obstruction excludes
+metric dimension one.
+
+For all $r\geq3$, the nonsingular spectral argument still applies:
+at $t=2e$ one has $P=e^{r-1}r\ne-3/2$; at the large quadratic conjugate
+one has $|p_{r-2}(T)|>1$, since $r-2\geq1$.
+The singular systems depend only on $r$ modulo six.
+This proves the asserted table also for $r=3,4,5$.
+At $r=2$, direct expansion of $\det(zI-L)$ and $\det(zI-Q)$ gives
+\begin{align*}
+ \chi_L(z)&=z(z-1)(z-3)(z^2-6z+7)^2,\\
+ \chi_Q(z)&=(z-1)(z-3)(z^2-4z+1)(z^3-8z^2+17z-8).
+\end{align*}
+This length-two graph is already the second graph in
+\cite[Table~2, p.~23]{AKS}, under the relabeling
+$(u,v,a,b,c,d,y_1)\mapsto(1,4,2,3,6,5,7)$; its aggregate values
+$(\dim,\mm_L,\mm_Q)=(2,2,1)$ are recorded there.
+The quadratic in $\chi_L$ has roots $3\pm\sqrt2$, distinct from $0,1,3$.
+The two nonlinear factors of $\chi_Q$ have discriminants $12$ and $316$,
+respectively; the remainder of the cubic modulo the quadratic is $-4$,
+and neither factor vanishes at $1$ or $3$.
+Thus $\chi_Q$ is squarefree. Comparing the resulting maxima with the
+metric dimensions proves all equality assertions.
+\end{proof}
+
+\begin{corollary}[A specialization of Paone--Paone (2026)]\label{cor:two}
+For every $r\geq2$,
+\[
+ \operatorname{mult}_{Q(\Th_{3,3,r})}(2)
+ =\begin{cases}1,&r\equiv1\pmod4,\\0,&\text{otherwise}.\end{cases}
+\]
+This is the $(3,3,r)$ instance of \cite[Corollary~8.1]{PP}.
+\end{corollary}
+\begin{proof}
+Put $e=-1,t=0$ in \eqref{eq:short}--\eqref{eq:rec}.
+Then $C=-A$, $B=-D_0$, $s=Y_1=-A+2D_0$, and the long-path
+sequence is $A,s,-A,-s,\ldots$.
+For $r\equiv0,1,2,3\pmod4$, the two remaining endpoint equations
+reduce respectively to
+\[
+\begin{array}{c|cc}
+r\bmod4&\multicolumn{2}{c}{\text{endpoint conditions}}\\\hline
+0&D_0=A&-s=A\\
+1&D_0=s&A=-D_0+2A\\
+2&D_0=-A&s=3A\\
+3&D_0=-s&-A=-D_0+2A
+\end{array}
+\]
+Using $s=-A+2D_0$ leaves a one-dimensional solution space only
+in residue one, and the zero space in the other three residues.
+The antisymmetric subspace has eigenvalues $1,3$, not $2$.
+\end{proof}
+
+\section{A rooted-path consequence in both directions}
+The restriction to $\Th_{3,3,r}$ precludes signless-only separation,
+but a different construction gives both directions of Problem~30.
+It combines the base examples in \cite[Theorems~10, 12 and Corollary~17]{AKS}
+with known rooted-product results. The one-leaf metric criterion is
+Jannesari's Theorem~2.2 \cite{J}; Feng and Wang
+\cite[Proposition~2.10, equation (5)]{FW} extend it to longer paths
+for diameter-two bases. The spectral block formula is
+Cardoso--Martins--Robbiano--Rojo \cite[Theorem~2.1, equation (2.4)]{CMRR}.
+We give the short specialization explicitly.
+
+\begin{corollary}\label{cor:rooted}
+For $t\geq1$, form $H_t$ by attaching one path of $t$ edges to every
+vertex of $H$, identifying that vertex with one endpoint of its path.
+If $H=K_{1,3,3}$ then
+$(\dim H_t,\mm_L(H_t),\mm_Q(H_t))=(4,4,5)$.
+If $H=K_2\vee(2K_2)$ then the triple is $(3,2,3)$.
+Both constructions give infinite pairwise nonisomorphic families of
+connected twin-free graphs. Thus Problem~30 has examples in both directions.
+\end{corollary}
+\begin{proof}
+Write a vertex as $(v,j)$, where $v\in V(H)$ and $0\leq j\leq t$ is
+its depth on the attached path. For a metric basis $B$ of $H$, take
+the landmarks $\{(b,t):b\in B\}$. The distance to $(b,t)$ is $t-j$ if
+$v=b$, and $j+t+d_H(v,b)$ otherwise. A vertex above a basis vertex
+is identified by its unique coordinate at most $t$, then by that
+coordinate's value. All remaining profiles are
+$j+t+r_H(v\mid B)$. They are distinct provided no two outside
+profiles differ by a nonzero constant vector.
+For $K_{1,3,3}$ choose two vertices in each part of size three.
+The outside profiles are $1111,2211,1122$; for $K_2\vee(2K_2)$ choose
+one vertex from each of its three twin pairs. Its outside profiles
+are $111,112,121$. Neither list contains a pair differing by a
+nonzero constant vector. These bases have minimum sizes four and
+three respectively, since a resolving set omits at most one vertex
+from each twin class. Conversely, projection of any resolving set
+of $H_t$ to its base vertices resolves the roots, because
+$d((v,0),(b,j))=d_H(v,b)+j$. Thus $\dim H_t=\dim H$.
+
+For $X=L,Q$, diagonalizing $X(H)$ decomposes $X(H_t)$ into the
+blocks $X(P_{t+1})+\mu E_{00}$, one per base eigenvalue $\mu$,
+with its multiplicity. Each block is irreducible tridiagonal and
+has simple spectrum: an eigenvector's first coordinate determines
+all subsequent coordinates by the row recurrence, and cannot be zero.
+Its characteristic polynomial has the form $F(z)-\mu R(z)$,
+where $R$ is the polynomial of the endpoint-deleted path block.
+Consecutive endpoint minors are coprime: a common zero propagated
+down the determinant recurrence would make the final constant
+minor $1$ vanish. Hence $F$ and $R$ have no common zero, and blocks
+for distinct $\mu$ have disjoint spectra. It follows that
+$\mm_X(H_t)=\mm_X(H)$.
+The base spectra are
+\[
+\begin{array}{c|cc}
+H&\operatorname{Spec}L&\operatorname{Spec}Q\\\hline
+K_{1,3,3}&0,4^{(4)},7^{(2)}&1,4^{(5)},9\\
+K_2\vee(2K_2)&0,2,4^{(2)},6^{(2)}&2^{(3)},4^{(2)},8.
+\end{array}
+\]
+These agree with the cited base formulas.
+Both bases have minimum degree at least two, so the roots in $H_t$
+have degree at least three and have distinct attached neighbors.
+The nonroots have degree at most two and lie on pendant paths:
+none lies on a triangle or quadrilateral, and distinct leaves have
+distinct parents. These facts exclude adjacent and nonadjacent twins,
+including a root paired with a nonroot. Connectivity is immediate,
+and the orders $|V(H)|(t+1)$ distinguish the members of either family.
+\end{proof}
+
+\section{Coverage and accompanying checks}
+For the modular-partition part of Problem~32, the following general
+lower bound is already implicit in Belmonte--Fomin--Golovach--Ramanujan
+\cite[Section~4, Lemma~7, p.~16]{BFG}.
+For a proper module $M$, let $\rho(M)$ be the minimum number of
+landmarks in $M$ separating its vertices using distances in $G[M]$
+with every distance capped at two (including disconnected pairs).
+\begin{corollary}\label{cor:module}
+If $M_1,\ldots,M_s$ are pairwise disjoint proper modules in a connected
+graph, then $\dim G\geq\sum_i\rho(M_i)$.
+\end{corollary}
+\begin{proof}
+Every vertex outside a module has the same distance to all its members,
+so only landmarks inside it can separate them. Connectivity makes
+distances between its members equal to the capped induced distances.
+Thus every resolving set has at least $\rho(M_i)$ members in each $M_i$;
+disjointness permits summation.
+\end{proof}
+For a twin class of size $m$, this gives $\rho=m-1$.
+The source's open problems are in \cite[Section~9, p.~27]{AKS}.
+\begin{center}\small
+\begin{tabular}{@{}p{27mm}p{118mm}@{}}
+\toprule
+Source item&Coverage\\\midrule
+Problem 28&Partially answered: a twin-free mechanism, via short-path
+symmetry and spectral collisions; the characterization of all connected
+graphs is not covered.\\
+Problem 29&Answered for $\Th_{3,3,r}$, every $r\geq2$:
+Corollary~\ref{cor:complete}. Its congruence question has an affirmative
+answer within this subfamily; general path lengths are not covered.\\
+Problem 30&Answered: yes, by Theorem~\ref{thm:main}; no requirement for
+both directions is imposed by the question. Corollary~\ref{cor:rooted}
+also supplies both directions from prior rooted-product theorems.\\
+Problem 31&Not covered: one graph per relevant order does not improve
+the exponential lower bound of the source's Corollary~24.\\
+Problem 32&Prior modular lower bound reproved as
+Corollary~\ref{cor:module}; an equitable invariant-subspace example is
+supplied below. General spectral-equality criteria are not covered.\\
+Problem 33&Not covered: the theta graph has no pendant branches;
+Corollary~\ref{cor:rooted} attaches only one path per root, rather
+than the question's $p_i\geq2$ copies.\\
+\cite[Table~2, row~2]{AKS}&Prior proof cited: the aggregate metric and
+multiplicity values at $r=2$; the factorization above specifies its
+repeated eigenvalues.\\
+\cite[Theorem~25, Corollary~26]{AKS}&Prior proof cited: the twin-bearing
+$\Th_{2,2,r}$ separation families; not a twin-free answer to Problem~30.\\
+\cite[Theorems~8, 14]{KSS}&Reproved for the resolving-pair cases;
+prior proof Knor--Sedlar--\v{S}krekovski (2022). The exceptional metric
+dimensions are taken from their Theorem~8.\\
+\cite[Theorem~4.4]{BFM}&Prior proof cited: the later alternative
+metric-dimension proof of Benakli--Froitzheim--Martinez (2025), with
+parameters $(2,2,r-1)$, after reordering.\\
+\cite[Corollary~8.1]{PP}&Reproved specialization;
+prior proof Paone--Paone (2026): multiplicity at $Q$-eigenvalue $2$.\\
+\cite[Corollary~16]{BK}&Reproved; prior proof Bahmani--Kiani
+(2015/2016): periodicity at $1,3$, not exclusion of other repeated roots.\\
+\cite{J,FW,CMRR}&Prior results specialized and proved explicitly
+in Corollary~\ref{cor:rooted}; the base spectra are from \cite{AKS}.\\
+\cite[Section~4, Lemma~7]{BFG}&Reproved; prior proof
+Belmonte--Fomin--Golovach--Ramanujan (2016): modular lower bound.\\
+Signless-only requirement&Not posed for this subfamily; obstruction
+proved by Corollary~\ref{cor:complete}.\\
+\bottomrule
+\end{tabular}
+\end{center}
+All Problems 28--33 in this table refer to \cite[Section~9, p.~27]{AKS}.
+For Problem~32, the cells $\{a,c\},\{b,d\}$ and all remaining singleton
+cells form an equitable partition for both matrices: it is the orbit
+partition of the short-path swap. Its cell-constant subspace is exactly
+the symmetric subspace above, while its orthogonal complement is the
+two-dimensional antisymmetric subspace, with eigenvalues $1,3$.
+Their collisions with symmetric eigenvalues produce the equalities
+without twins. This decomposition is an example, not a general partition
+lower-bound theorem.
+Corollary~\ref{cor:module} supplies the separate modular lower bound.
+The metric dimension also follows from \cite[arXiv version, Theorems~8 and~14]{KSS};
+the explicit resolving pairs give direct certificates outside $r=3,5$.
+The proof in Sections 2--3 establishes the full theorem and
+Corollary~\ref{cor:all-lengths}. The accompanying \texttt{verify.py} checks
+every integer $2\leq r\leq40$ by exact distance calculations and
+polynomial greatest common divisors. In particular, for $1\leq k\leq6$:
+\[
+ \gcd(\chi_L,\chi_L')=(z-1)(z-3),\qquad
+ \gcd(\chi_Q,\chi_Q')=1.
+\]
+For $r=3,5$ it exhausts all pairs and supplies a resolving triple;
+otherwise it checks the displayed resolving pair. It also checks the
+endpoint factorization, all twenty-four singular systems, the exceptional
+length-two factors and Corollary~\ref{cor:two}. It also checks both bases
+of Corollary~\ref{cor:rooted} for attached paths of one through four edges:
+connectivity, twin-freeness, leaf resolving sets and exact spectral
+multiplicities. These finite checks support,
+but are not premises of, the
+all-parameter proof.
+The Lean declaration
+\href{https://github.com/the-omega-institute/trureturing/blob/d9bb8a406783c5222849b798f3c2ab738f653d75/D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaSeparation.lean}{\texttt{TwinFreeThetaSeparation.result}}
+has as its conclusion the existence of an infinite pairwise nonisomorphic family of
+connected twin-free graphs with exactly one equality. Its witnesses are
+$\Th_{3,3,6k+4}$, $k\geq1$, and its conclusion does not specify repeated
+eigenvalues or classify other lengths. The full multiplicity classification,
+the distance formulas and Corollaries~\ref{cor:two}, \ref{cor:rooted} have the written proofs
+above; the accompanying computations cover the stated finite range.
+
+\begin{thebibliography}{10}
+\bibitem{AKS} M.~R.~Alfuraidan, S.~Khan and L.~Sauras-Altuzarra,
+\emph{Metric dimension and maximum eigenvalue multiplicity of graph
+Laplacians}, arXiv:2610.26875v1 (2026).
+\url{https://arxiv.org/abs/2610.26875v1}.
+\bibitem{KSS} M.~Knor, J.~Sedlar and R.~\v{S}krekovski,
+\emph{Remarks on the vertex and the edge metric dimension of 2-connected
+graphs}, Mathematics \textbf{10} (2022), no.~14, 2411.
+\url{https://doi.org/10.3390/math10142411}.
+Theorem~14 is also in arXiv:2203.07335v1, p.~10.
+\bibitem{PP} A.~Paone and M.~Paone,
+\emph{Line-graph inertia of roses and generalized theta graphs},
+version~1.0, 1~August 2026, Corollary~8.1, pp.~10--11.
+\url{https://doi.org/10.5281/zenodo.21744051}.
+\bibitem{BFM} N.~Benakli, N.~Froitzheim and D.~Martinez,
+\emph{Metric dimension of generalized theta graphs},
+arXiv:2510.12100v1, 14~October 2025, Theorem~4.4, p.~11.
+\url{https://arxiv.org/abs/2510.12100v1}.
+\bibitem{BK} A.~Bahmani and D.~Kiani,
+\emph{Graph reduction techniques and the multiplicity of the Laplacian
+eigenvalues}, arXiv:1512.08265v5 (2016), first posted 27~December 2015.
+\url{https://arxiv.org/abs/1512.08265v5}.
+\bibitem{LL} X.~Liu and P.~Lu, \emph{Laplacian spectral characterization
+of dumbbell graphs and theta graphs}, arXiv:1407.5255v2 (2014),
+Proposition~2.6, pp.~3--4.
+\url{https://arxiv.org/abs/1407.5255v2}.
+\bibitem{J} M.~Jannesari, \emph{On the metric dimension of corona
+product of a graph with $K_1$}, Kyungpook Mathematical Journal
+\textbf{63} (2023), 123--129, Theorem~2.2, pp.~125--126.
+\url{https://doi.org/10.5666/KMJ.2022.63.1.123}.
+\bibitem{FW} M.~Feng and K.~Wang, \emph{On the metric dimension and
+fractional metric dimension for hierarchical product of graphs},
+arXiv:1211.1432v1 (2012), Proposition~2.10, p.~6.
+\url{https://arxiv.org/abs/1211.1432v1}.
+\bibitem{CMRR} D.~M.~Cardoso, E.~A.~Martins, M.~Robbiano and O.~Rojo,
+\emph{Copies of a rooted weighted graph attached to an arbitrary
+weighted graph and applications}, Electronic Journal of Linear Algebra
+\textbf{26} (2013), Theorem~2.1, equation (2.4).
+\url{https://doi.org/10.13001/1081-3810.1681}.
+\bibitem{BFG} R.~Belmonte, F.~V.~Fomin, P.~A.~Golovach and
+M.~S.~Ramanujan, \emph{Metric dimension of bounded tree-length graphs},
+arXiv:1602.02610v1 (2016), Section~4, Lemma~7, p.~16.
+\url{https://arxiv.org/abs/1602.02610v1}.
+\end{thebibliography}
+\noindent\small\copyright\ 2026 Haobo Ma and Wenlin Zhang.
+Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+\end{document}
