@@ -2,16 +2,16 @@
   "files": {
     "pdf": {
       "bytes": 110097,
-      "matches_public": null,
+      "matches_public": true,
       "path": "paper.pdf",
-      "public_sha256": null,
+      "public_sha256": "503b4046d6a4750b9f8538ced6949d05086fb5b1f1d22bed5edd3b260e0a38d1",
       "sha256": "503b4046d6a4750b9f8538ced6949d05086fb5b1f1d22bed5edd3b260e0a38d1"
     },
     "source": {
       "bytes": 22922,
-      "matches_public": null,
+      "matches_public": true,
       "path": "source.archive",
-      "public_sha256": null,
+      "public_sha256": "52a9dcd04c04e876fb58da92a213e37f6ed3c33388b8e70382c2c374fbdfca90",
       "sha256": "52a9dcd04c04e876fb58da92a213e37f6ed3c33388b8e70382c2c374fbdfca90"
     }
   },
@@ -38,6 +38,8 @@
     "license": "CC-BY-4.0",
     "msc": [],
     "pdf": {
+      "bytes": 110097,
+      "sha256": "503b4046d6a4750b9f8538ced6949d05086fb5b1f1d22bed5edd3b260e0a38d1",
       "url": "/api/v1/collected-papers/aks2610-twin-free-theta-separation/files/pdf?version=2"
     },
     "previous_version": null,
@@ -46,6 +48,8 @@
     "record": "aks2610-twin-free-theta-separation",
     "repository_name": "aks2610-twin-free-theta-separation",
     "source": {
+      "bytes": 22922,
+      "sha256": "52a9dcd04c04e876fb58da92a213e37f6ed3c33388b8e70382c2c374fbdfca90",
       "url": "/api/v1/collected-papers/aks2610-twin-free-theta-separation/files/source?version=2"
     },
     "title": "A twin-free answer to Alfuraidan–Khan–Sauras-Altuzarra, arXiv:2610.26875v1, Section 9, Problem 30 (p. 27): a spectral extension of Knor–Sedlar–Škrekovski (2022)",
