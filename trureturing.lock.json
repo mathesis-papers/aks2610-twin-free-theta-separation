@@ -1,0 +1,25 @@
+{
+  "schema": "trureturing-books.lock.v1",
+  "repo": "the-omega-institute/trureturing",
+  "branch": "dev",
+  "commit": "d9bb8a406783c5222849b798f3c2ab738f653d75",
+  "pinned_at": "2026-11-14T21:44:57Z",
+  "declarations": {
+    "D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaSeparation.result": {
+      "module": "D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaSeparation",
+      "name": "D5.S3.Combinatorics.SpectralGraph.TwinFreeThetaSeparation.result",
+      "kind": "theorem",
+      "statement_id": "sha256:aa91e97642ac6c6c6f65a14cccc832338350fe45acdc962a2bac5f88abd1c4d4",
+      "line": 622,
+      "signature": "theorem result : claim"
+    },
+    "D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaStructure.theta_metric_certificates": {
+      "module": "D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaStructure",
+      "name": "D5.S3.Combinatorics.SpectralGraph.TwinFreeThetaStructure.theta_metric_certificates",
+      "kind": "theorem",
+      "statement_id": "sha256:8162f026c4fc6b5760f32b2741c0ac5fd6943bca22de6f0f4334f35580b20518",
+      "line": 642,
+      "signature": "theorem theta_metric_certificates (k : ℕ) (hk : 1 ≤ k) : (thetaGraph (6*k+4) (by omega)).Connected ∧ TwinFree (thetaGraph (6*k+4) (by omega)) ∧ metricDimension (thetaGraph (6*k+4) (by omega)) = 2"
+    }
+  }
+}

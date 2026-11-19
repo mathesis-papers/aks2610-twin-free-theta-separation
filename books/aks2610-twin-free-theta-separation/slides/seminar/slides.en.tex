@@ -1,0 +1,338 @@
+\documentclass{beamer}
+\input{tbook-deck}
+\title{Two landmarks and two spectral multiplicities}
+\subtitle{Ma--Zhang · Public paper version 2}
+\author{Haobo Ma\inst{1} \and Wenlin Zhang\inst{1,2}}
+\institute{\inst{1} Chrono AI, Singapore \and \inst{2} National University of Singapore, Singapore}
+\date{2026}
+\begin{document}
+% Manuscript: Title, public version 2
+\begin{frame}
+\titlepage
+\note{Start with locating yourself on a walking map, then explain number patterns for matrices. This talk derives from public paper version 2.}
+\end{frame}
+% Manuscript: Sections 1–5, argument route
+\begin{frame}{Outline}
+\tableofcontents
+\note{Introduce the objects and question, then the mechanism, classification and exact evidence scope. The technical exclusion argument is in the appendix.}
+\end{frame}
+\section{Maps, landmarks and the question}
+% Manuscript: Section 1; reading introduction
+\begin{frame}{Three paths between two terminals}
+\[
+u-a-b-v,\qquad u-c-d-v,
+\]
+\[
+u=y_0-y_1-\cdots-y_r=v.
+\]
+\begin{itemize}
+\item Disjoint path interiors; edge lengths $3,3,r$.
+\item There are $r+5$ vertices. Parameters count edges.
+\item First main example: $r=10$, with $15$ vertices.
+\end{itemize}
+\note{Ask the audience to sketch the three paths. Count the terminals only once. The long path contributes $r-1$ interior vertices, giving $r+5$ altogether. Next put landmarks at $a,y_1$.}
+\end{frame}
+% Manuscript: Section 2; distance certificate
+\begin{frame}{A distance list is an address}
+\begin{block}{Metric dimension}
+The fewest landmarks whose distance lists distinguish all vertices.
+\end{block}
+For $r=10$, choose $(a,y_1)$:
+\[
+u:(1,1),\ v:(2,4),\ a:(0,2),\ b:(1,3),
+\]
+\[
+c:(2,2),\ d:(3,3),\ y_1:(2,0),\ y_9:(3,5).
+\]
+The reading lists all $15$ distinct addresses.
+\note{Explain the coordinate order and ask the audience to calculate $y_9$. Going through $v$ reaches $a$ in $3$ steps and reaches $y_1$ through a short path in $5$. This slide shows only part of the complete table in the reading.}
+\end{frame}
+% Manuscript: Section 2; Structure.theta_metric_certificates
+\begin{frame}{Why exactly two?}
+\begin{bookresult}{theta-geometry}
+For every $k\geq1$, $\Theta_{3,3,6k+4}$ is connected and twin-free, with $\dim G=2$.
+\end{bookresult}
+\begin{itemize}
+\item Two suffice: take the shorter of two candidate routes.
+\item If all distances differed, three neighbors would have only two distances available: a contradiction.
+\item Twins would force a triangle or quadrilateral; neither exists.
+\end{itemize}
+\note{Distances to one landmark change by at most $1$ across an edge. If distances never repeat, only one less or one more is possible. The twin argument uses minimum degree at least $2$. This Lean declaration asserts geometry only.}
+\end{frame}
+% Manuscript: Section 1; definitions
+\begin{frame}{Two rules for number patterns}
+\[
+(Lx)_v=\deg(v)x_v-\sum_{w\sim v}x_w,
+\]
+\[
+(Qx)_v=\deg(v)x_v+\sum_{w\sim v}x_w.
+\]
+\begin{itemize}
+\item $Mx=\lambda x$: a pattern is scaled uniformly.
+\item Multiplicity counts independent patterns at that $\lambda$.
+\item $\operatorname{mm}_M$ maximizes multiplicity over all $\lambda$.
+\end{itemize}
+\note{Use the patterns $(1,1)$ and $(1,-1)$ on one edge to explain eigenvectors. Maximum multiplicity does not mean multiplicity of the largest eigenvalue. Real symmetry identifies geometric and algebraic multiplicities.}
+\end{frame}
+% Manuscript: Section 1; AKS Section 9 Problem 30 p.27
+\begin{frame}{The question: keep exactly one equality}
+\begin{block}{Alfuraidan--Khan--Sauras-Altuzarra}
+Are there infinitely many pairwise nonisomorphic connected twin-free graphs satisfying exactly one equality?
+\[
+\operatorname{mm}_L G=\dim G,\qquad
+\operatorname{mm}_Q G=\dim G.
+\]
+\end{block}
+\small arXiv:2610.26875v1, Section 9, Problem 30, p.~27.
+
+Twins satisfy $N(p)\setminus\{q\}=N(q)\setminus\{p\}$ for $p\ne q$.
+\note{Exclude both adjacent and nonadjacent twins. The question does not require a family in each direction. It also does not exclude symmetry of entire pieces.}
+\end{frame}
+% Manuscript: Theorem 1; Corollary 2
+\begin{frame}{The manuscript’s explicit answer}
+\begin{block}{Manuscript Theorem 1 and Corollary 2}
+$k\geq1$, $r=6k+4$, $G_k=\Theta_{3,3,r}$:
+\[
+(\dim G_k,\operatorname{mm}_L G_k,\operatorname{mm}_Q G_k)=(2,2,1).
+\]
+Only $1,3$ are repeated in $L$, each double; $Q$ is simple.
+\end{block}
+Distinct orders $6k+9$ imply pairwise nonisomorphism.
+
+\small Manuscript written argument; \href{https://github.com/the-omega-institute/trureturing-requests/issues/39}{formalization task for the full spectral classification}.
+\note{This is the full manuscript conclusion. The existential declaration must not be used as verification of all these clauses. Knor--Sedlar--Škrekovski already classified the metric part; the simultaneous spectral classification and separation are the extension.}
+\end{frame}
+\section{Symmetry and recurrence}
+% Manuscript: Section 3; invariant subspaces
+\begin{frame}{Symmetry of pieces, without twins}
+Exchange $(a,b)$ with $(c,d)$ and split any pattern:
+\[
+x=\frac{x+Sx}{2}+\frac{x-Sx}{2}.
+\]
+\begin{itemize}
+\item Symmetric: equal values on the two short paths.
+\item Antisymmetric: opposite values, zero elsewhere.
+\item Both parts are preserved by $L$ and $Q$.
+\end{itemize}
+A common eigenvalue in both parts creates repetition.
+\note{Here $S$ is the swap operator and $S^2=I$. The decomposition comes from exchanging whole pieces, rather than from twin vertices.}
+\end{frame}
+% Manuscript: Section 3; antisymmetric restriction
+\begin{frame}{A two-by-two matrix}
+Write $M_e=D-eA$: $e=1$ gives $L$, $e=-1$ gives $Q$.
+
+Antisymmetric short-path values are $(B,C)$ and $(-B,-C)$:
+\[
+\begin{pmatrix}2&-e\\-e&2\end{pmatrix}.
+\]
+\begin{itemize}
+\item Eigenvalues $2-e,2+e$, namely $1,3$.
+\item One antisymmetric direction at each value.
+\item These directions do not depend on the long-path length.
+\end{itemize}
+\note{Substitute $(1,1)$ and $(1,-1)$ to check the eigenvalues. The short paths cancel at the terminals. We have not yet proved multiplicity two.}
+\end{frame}
+% Manuscript: Section 3 equations (short), (ends), (rec)
+\begin{frame}{The long path remembers two numbers}
+Symmetric values: terminals $A,D_0$, short paths $B,C$, long path $Y_j$.
+\[
+t=e(2-\lambda),\qquad Y_{j+1}=tY_j-Y_{j-1}.
+\]
+\[
+\begin{aligned}
+tB&=A+C,&tC&=B+D_0,\\
+Y_1&=(t+e)A-2B,&Y_r&=D_0,\\
+Y_{r-1}&=(t+e)D_0-2C,&Y_0&=A.
+\end{aligned}
+\]
+Initial values determine the path; endpoints select allowed patterns.
+\note{Interior vertices have degree $2$, giving the recurrence. The terminals have degree $3$, so their separate endpoint equations are essential.}
+\end{frame}
+% Manuscript: Section 3.1; singular sequences
+\begin{frame}{Periods six and three}
+\[
+\begin{array}{c|l}
+t=1&A,s,s-A,-A,-s,A-s,A,s,\ldots\\
+t=-1&A,s,-A-s,A,s,-A-s,\ldots
+\end{array}
+\]
+\begin{itemize}
+\item Endpoint compatibility depends on $r\bmod6$.
+\item At $r=6k+4$, symmetric dimensions are:
+\end{itemize}
+\[
+\begin{array}{c|cc}&t=1&t=-1\\\hline L&1&1\\Q&0&0\end{array}
+\]
+\note{Ask the audience to calculate the next four terms from $A,s$. For $Q$, the conversion is $\lambda=2+t$; for $L$, it is $\lambda=2-t$. The table counts only the symmetric part.}
+\end{frame}
+% Manuscript: Sections 3.1–3.2
+\begin{frame}{Collisions explain doubles; exclusion completes the proof}
+\begin{itemize}
+\item At $1,3$ for $L$: one direction of each symmetry type.
+\item At $1,3$ for $Q$: only the antisymmetric direction.
+\item Other eigenvalues must still be ruled out as repetitions.
+\end{itemize}
+If $t^2\ne1$, endpoints $(A,D_0)$ determine the pattern.
+
+A nonzero linear relation constrains them, so the symmetric eigenspace has dimension at most one.
+\note{The exclusion step turns finding repeated roots into listing all of them. The appendix gives the relation and explains why its two coefficients cannot both vanish.}
+\end{frame}
+\section{Classification and extensions}
+% Manuscript: Corollaries 3–4; Section 3.3
+\begin{frame}{The spectral classification by six residues}
+\small For all $r\geq3$: repeated values only, each double.
+\[
+\begin{array}{c|cc|cc}
+r\bmod6&L&Q&\operatorname{mm}_L&\operatorname{mm}_Q\\\hline
+0&3&1&2&2\\1&3&3&2&2\\2&\varnothing&\varnothing&1&1\\
+3&1,3&1,3&2&2\\4&1,3&\varnothing&2&1\\5&\varnothing&\varnothing&1&1
+\end{array}
+\]
+For $r\geq6$, $\dim G=2$; for $r=3,5$, $\dim G=3$.
+
+\small Manuscript Corollaries 3--4; \href{https://github.com/the-omega-institute/trureturing-requests/issues/40}{shared classification request}.
+\note{This is not the full spectrum. An empty set means all eigenvalues are simple. Locate $r=10$ in residue four, then compare $r=9$, where both equalities hold. At $r=4$, metric dimension is also $2$.}
+\end{frame}
+% Manuscript: Corollary 4; KSS Theorems 8,14; AKS Table 2
+\begin{frame}{Small exceptions matter}
+\begin{itemize}
+\item $r=3,5$: $\dim G=3$, both maximum multiplicities are $2$.
+\item $r=2$: only $3\pm\sqrt2$ repeat in $L$, each double; $Q$ is simple.
+\item Exactly one equality: $r=2$ or $r\equiv4\pmod6$, always for $L$.
+\end{itemize}
+\small Metric exceptions: Knor--Sedlar--Škrekovski (2022).
+The $r=2$ aggregate values already occur in AKS Table 2, row 2.
+
+No $Q$-only example in this subfamily is not a claim about all graphs.
+\note{Emphasize that the metric exceptions cannot be read off from the spectral table. The spectral classification extends the prior metric classification. Eigenvalue two on the next slide is a different question.}
+\end{frame}
+% Manuscript: Corollary 5; Paone–Paone Corollary 8.1
+\begin{frame}{Eigenvalue two: a different period}
+\[
+\operatorname{mult}_{Q(\Theta_{3,3,r})}(2)=
+\begin{cases}1,&r\equiv1\pmod4,\\0,&\text{otherwise},\end{cases}
+\qquad r\geq2.
+\]
+At $e=-1,t=0$: $A,s,-A,-s,\ldots$.
+
+\begin{itemize}
+\item Period four controls whether this eigenvalue occurs.
+\item Period six controls repetition at $1,3$.
+\end{itemize}
+\small Manuscript Corollary 5; specialization of Paone--Paone (2026), Corollary 8.1.
+\href{https://github.com/the-omega-institute/trureturing-requests/issues/41}{Eigenvalue two request}.
+\note{For example, at $r=9$, eigenvalue two is simple while $1,3$ are double. There is no conflict. This specializes a prior formula, rather than giving another maximum-multiplicity classification.}
+\end{frame}
+% Manuscript: Corollary 6; Section 4
+\begin{frame}{Attach one identical tail at every vertex}
+Attach a path of $t\geq1$ edges at every vertex of $H$, giving $H_t$.
+\[
+\begin{array}{c|ccc}
+H&\dim H_t&\operatorname{mm}_L H_t&\operatorname{mm}_Q H_t\\\hline
+K_{1,3,3}&4&4&5\\
+K_2\vee(2K_2)&3&2&3
+\end{array}
+\]
+Both families are connected and twin-free; orders grow with $t$.
+
+\small Manuscript Corollary 6 specializes AKS bases, metric tools of Jannesari and Feng--Wang, and spectral blocks of Cardoso et al.
+\href{https://github.com/the-omega-institute/trureturing-requests/issues/42}{Rooted-path request}.
+\note{Explain the complete tripartite graph with parts $1,3,3$. The join $K_2\vee(2K_2)$ adds two joined universal vertices to two disjoint edges. Each root receives one tail; this does not solve the multiple-branch Problem 33.}
+\end{frame}
+% Manuscript: Corollary 7; Section 5
+\begin{frame}{Outside landmarks cannot see inside a module}
+A module $M$: each outside vertex sees all of $M$ or none.
+
+$\rho(M)$: the fewest internal landmarks resolving $M$ using induced distances capped at $2$.
+\begin{block}{Manuscript Corollary 7; a prior module bound}
+For disjoint nonempty proper modules in a connected graph,
+\[
+\dim G\geq\sum_i\rho(M_i).
+\]
+\end{block}
+\small Belmonte--Fomin--Golovach--Ramanujan (2016), Lemma 7.
+\href{https://github.com/the-omega-institute/trureturing-requests/issues/43}{Module-bound request}.
+\note{Disconnected induced pairs also get capped distance $2$. Outside landmarks have equal distances to module members; connectivity provides an outside common neighbor. Disjointness permits summing. A singleton has $\rho=0$.}
+\end{frame}
+\section{Exact evidence and limits}
+% Manuscript: Section 5; Lean result conclusion
+\begin{frame}{What does the public Lean conclusion say?}
+\begin{bookresult}{infinite-separation}
+There are orders $n_i$ and graphs $G_i$ on $\mathrm{Fin}(n_i)$, each connected and twin-free, satisfying exactly one equality. For $i\ne j$, $G_i,G_j$ are nonisomorphic.
+\end{bookresult}
+\begin{itemize}
+\item The conclusion is existential, without a repeated-root list.
+\item Its proof chooses the theta family and the $L$ direction.
+\item The explicit family and full classification need separate comparison.
+\end{itemize}
+\note{The quantifiers first choose an order function and a graph function, then assert the properties for all natural indices and nonisomorphism for every distinct pair. The reading expands the full disjunction for exactly one equality.}
+\end{frame}
+% Manuscript: Section 5; coverage table; bibliography
+\begin{frame}{Contribution and boundaries}
+\begin{itemize}
+\item Problem 30: yes; rooted paths give both directions.
+\item Problem 29: $\Theta_{3,3,r}$ only, rather than all path triples.
+\item No equality test for all connected graphs or improved exponential count.
+\item Finite checks for $2\leq r\leq40$ support the argument, not the all-parameter proof.
+\end{itemize}
+\note{The full classification follows from the written recurrence and endpoint argument. The finite calculations illustrate its predictions; the existing Lean results establish the narrower geometric and existential statements described earlier.}
+\end{frame}
+% Manuscript: Reading sources; canonical shared requests
+\begin{frame}{Continue through the same shared requests}
+\begin{itemize}
+\item \href{https://github.com/the-omega-institute/trureturing-requests/issues/39}{Precise main-family spectrum} and \href{https://github.com/the-omega-institute/trureturing-requests/issues/40}{all-length classification}.
+\item \href{https://github.com/the-omega-institute/trureturing-requests/issues/41}{Eigenvalue two}, \href{https://github.com/the-omega-institute/trureturing-requests/issues/42}{rooted paths}, \href{https://github.com/the-omega-institute/trureturing-requests/issues/43}{module bound}.
+\item Focused contributor-fork PRs go directly to upstream \texttt{dev}.
+\item Preserve original credit; compare exact statements after merge.
+\end{itemize}
+Symmetry of whole pieces creates spectral collisions without twins.
+\note{Requests coordinate work; they are not proof receipts or platform credit. Reading and presentation share the same scope and the same queue.}
+\end{frame}
+\appendix
+\section{Technical appendix}
+% Manuscript: Section 3.2 equations (cont), (linear), (factor)
+\begin{frame}{The algebra excluding hidden repetitions}
+\small
+$q=t^2-1\ne0$, $P=p_{r-1}(t)$, $R=p_{r-2}(t)$.
+\[
+(q+2P)D_0=\bigl(P((t+e)q-2t)-Rq\bigr)A.
+\]
+\[
+p_n^2+p_{n+1}^2-tp_np_{n+1}=1.
+\]
+Vanishing of both coefficients would force
+\[
+(t-2e)(t^2-1)(t^2+2et-1)=0.
+\]
+At $t=2e$, $P\ne-3/2$. The quadratic has a conjugate $T$ with $|T|>2$, where recurrence growth contradicts $R=e$.
+\note{Here $p_0=1,p_1=t$. Irreducibility over the rationals transfers a zero of $p_{r-2}(t)-e$ to the conjugate root. For $r\geq3$, the index $r-2\geq1$ gives absolute value greater than $1$.}
+\end{frame}
+% Manuscript: Section 4; rooted product proof
+\begin{frame}{Why do tails preserve maximum multiplicity?}
+A base eigenvalue $\mu$ produces the block
+\[
+X(P_{t+1})+\mu E_{00},\qquad X=L,Q.
+\]
+\begin{itemize}
+\item An irreducible tridiagonal block has simple spectrum.
+\item Its polynomial is $F(z)-\mu R(z)$.
+\item Coprime endpoint minors imply no common zero of $F,R$.
+\item Distinct $\mu$ give disjoint spectra, preserving base multiplicities.
+\end{itemize}
+\note{A zero first coordinate forces every coordinate to vanish by row recurrence. If two distinct values of $\mu$ shared an eigenvalue, subtracting the equations would give $R=0$, hence $F=0$, contradicting coprimality.}
+\end{frame}
+% Manuscript: Bibliography; sources
+\begin{frame}{Principal sources}
+\footnotesize
+\begin{itemize}
+\item Ma--Zhang, version 2, 2026; \href{https://mathesis-omega-research.apps.chrono-ai.fun/papers/aks2610-twin-free-theta-separation?version=2}{public paper}, CC BY 4.0.
+\item Alfuraidan--Khan--Sauras-Altuzarra: arXiv:2610.26875v1, Section 9, Problem 30.
+\item Knor--Sedlar--Škrekovski (2022): \href{https://doi.org/10.3390/math10142411}{10.3390/math10142411}.
+\item Paone--Paone (2026), Corollary 8.1: \href{https://doi.org/10.5281/zenodo.21744051}{10.5281/zenodo.21744051}.
+\item Full references and source locations for rooted paths and the module bound are in the bilingual reading.
+\end{itemize}
+\note{The source title is A twin-free answer to Alfuraidan–Khan–Sauras-Altuzarra, arXiv:2610.26875v1, Section 9, Problem 30 (p. 27): a spectral extension of Knor–Sedlar–Škrekovski (2022). Retain the exact version and original authorship.}
+\end{frame}
+% Manuscript: exact public geometry and existential declarations only
+\FormalVerification
+\end{document}

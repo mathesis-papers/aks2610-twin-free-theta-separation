@@ -1,0 +1,108 @@
+{
+  "book": "aks2610-twin-free-theta-separation",
+  "pending_claims": [],
+  "results": {
+    "theta-geometry": {
+      "claim": "collected:aks2610-twin-free-theta-separation:2:s1",
+      "gids": [
+        "D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaStructure.theta_metric_certificates"
+      ],
+      "comparison_verdict": "same",
+      "compared_public_gid": "D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaStructure.theta_metric_certificates",
+      "comparison_commit": "d9bb8a406783c5222849b798f3c2ab738f653d75"
+    },
+    "theta-main": {
+      "claim": "collected:aks2610-twin-free-theta-separation:2:s1",
+      "gids": [],
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaStructure.theta_metric_certificates",
+      "comparison_commit": "d9bb8a406783c5222849b798f3c2ab738f653d75",
+      "formalization_request": {
+        "label": "Theorem 1 — precise theta-family spectrum",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/39"
+      }
+    },
+    "explicit-family": {
+      "claim": "collected:aks2610-twin-free-theta-separation:2:s2",
+      "gids": [],
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaSeparation.result",
+      "comparison_commit": "d9bb8a406783c5222849b798f3c2ab738f653d75",
+      "formalization_request": {
+        "label": "Corollary 2 — explicit theta family",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/39"
+      }
+    },
+    "residue-classification": {
+      "claim": "collected:aks2610-twin-free-theta-separation:2:s3",
+      "gids": [],
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaSeparation.result",
+      "comparison_commit": "d9bb8a406783c5222849b798f3c2ab738f653d75",
+      "formalization_request": {
+        "label": "Corollary 3 — six-residue spectral classification",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/40"
+      }
+    },
+    "all-lengths": {
+      "claim": "collected:aks2610-twin-free-theta-separation:2:s4",
+      "gids": [],
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaSeparation.result",
+      "comparison_commit": "d9bb8a406783c5222849b798f3c2ab738f653d75",
+      "formalization_request": {
+        "label": "Corollary 4 — complete all-length classification",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/40"
+      }
+    },
+    "signless-two": {
+      "claim": "collected:aks2610-twin-free-theta-separation:2:s5",
+      "gids": [],
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "d9bb8a406783c5222849b798f3c2ab738f653d75",
+      "formalization_request": {
+        "label": "Corollary 5 — Paone–Paone specialization at eigenvalue two",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/41"
+      }
+    },
+    "rooted-paths": {
+      "claim": "collected:aks2610-twin-free-theta-separation:2:s6",
+      "gids": [],
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaSeparation.result",
+      "comparison_commit": "d9bb8a406783c5222849b798f3c2ab738f653d75",
+      "formalization_request": {
+        "label": "Corollary 6 — rooted-path separation in both directions",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/42"
+      }
+    },
+    "module-bound": {
+      "claim": "collected:aks2610-twin-free-theta-separation:2:s7",
+      "gids": [],
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "d9bb8a406783c5222849b798f3c2ab738f653d75",
+      "formalization_request": {
+        "label": "Corollary 7 — disjoint-module lower bound",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/43"
+      }
+    },
+    "infinite-separation": {
+      "claim": "collected:aks2610-twin-free-theta-separation:2:s2",
+      "gids": [
+        "D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaSeparation.result"
+      ],
+      "comparison_verdict": "same",
+      "compared_public_gid": "D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaSeparation.result",
+      "comparison_commit": "d9bb8a406783c5222849b798f3c2ab738f653d75"
+    }
+  },
+  "stage": "complete",
+  "titles": {
+    "en": "A twin-free answer to Alfuraidan–Khan–Sauras-Altuzarra, arXiv:2610.26875v1, Section 9, Problem 30 (p. 27): a spectral extension of Knor–Sedlar–Škrekovski (2022)",
+    "zh": "A twin-free answer to Alfuraidan–Khan–Sauras-Altuzarra, arXiv:2610.26875v1, Section 9, Problem 30 (p. 27): a spectral extension of Knor–Sedlar–Škrekovski (2022)"
+  },
+  "version": 2,
+  "work": "aks2610-twin-free-theta-separation"
+}

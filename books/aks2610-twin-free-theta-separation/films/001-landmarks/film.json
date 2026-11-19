@@ -1,0 +1,29 @@
+{
+  "id": "001-landmarks",
+  "title": "Two landmarks, two spectral rules",
+  "title_zh": "两个地标，两种谱论规则",
+  "subject": "https://github.com/the-omega-institute/trureturing",
+  "publication_basis": "pinned",
+  "released": "2026-11-14",
+  "duration": "2:22",
+  "resolution": "1280x720@30",
+  "style": "Academic mathematical explanation; deterministic two-dimensional scenes",
+  "narration": {
+    "language": "en",
+    "engine": "Kokoro-82M v1.0 (onnx)",
+    "voice": "af_heart"
+  },
+  "subtitles": [
+    "zh",
+    "en"
+  ],
+  "lean": [
+    "D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaStructure.theta_metric_certificates"
+  ],
+  "outputs": {
+    "narrated_720p": "aks2610-twin-free-theta-separation_001_720p_narrated.mp4",
+    "cover": "aks2610-twin-free-theta-separation_001_cover.jpg"
+  },
+  "summary": "A walking-map example explains metric dimension, spectral multiplicity and an infinite family separating two graph operators.",
+  "summary_zh": "从步行地图入手，理解度量维数、特征值重数，以及区分两种图算子的无限族。"
+}

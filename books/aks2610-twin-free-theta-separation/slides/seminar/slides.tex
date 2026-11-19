@@ -1,0 +1,338 @@
+\documentclass{beamer}
+\input{tbook-deck}
+\title{两个路标与两种谱重数}
+\subtitle{Ma--Zhang · Public paper version 2}
+\author{Haobo Ma\inst{1} \and Wenlin Zhang\inst{1,2}}
+\institute{\inst{1} Chrono AI, Singapore \and \inst{2} National University of Singapore, Singapore}
+\date{2026}
+\begin{document}
+% Manuscript: Title, public version 2
+\begin{frame}
+\titlepage
+\note{从步行地图的定位问题开始，再解释矩阵的数值图案。报告来自公开论文第 2 版。}
+\end{frame}
+% Manuscript: Sections 1–5, argument route
+\begin{frame}{报告路线}
+\tableofcontents
+\note{先讲对象与问题，再讲机制、分类和精确证据范围。技术排除放在附录。}
+\end{frame}
+\section{地图、路标与问题}
+% Manuscript: Section 1; reading introduction
+\begin{frame}{三条路连接两个端点}
+\[
+u-a-b-v,\qquad u-c-d-v,
+\]
+\[
+u=y_0-y_1-\cdots-y_r=v.
+\]
+\begin{itemize}
+\item 三条路内部互不相交，边数为 $3,3,r$。
+\item 顶点总数 $r+5$；参数数的是边。
+\item 第一张主要例子：$r=10$，共 $15$ 个点。
+\end{itemize}
+\note{请听众先画出三条路。两端只数一次。长路上有 $r-1$ 个内部点，因此总数为 $r+5$。下一页把两个路标放在 $a,y_1$。}
+\end{frame}
+% Manuscript: Section 2; distance certificate
+\begin{frame}{距离清单就是地址}
+\begin{block}{度量维数}
+最少选多少路标，才能用距离清单分清所有点？
+\end{block}
+对 $r=10$，路标取 $(a,y_1)$：
+\[
+u:(1,1),\ v:(2,4),\ a:(0,2),\ b:(1,3),
+\]
+\[
+c:(2,2),\ d:(3,3),\ y_1:(2,0),\ y_9:(3,5).
+\]
+书中列出全部 $15$ 对地址，互不重复。
+\note{先解释坐标顺序，再请听众计算 $y_9$。到 $a$ 经 $v$ 只需 $3$ 步，到 $y_1$ 经短路需 $5$ 步。这里展示的只是部分地址，完整表在书中。}
+\end{frame}
+% Manuscript: Section 2; Structure.theta_metric_certificates
+\begin{frame}{为什么恰好两个？}
+\begin{bookresult}{theta-geometry}
+每个 $k\geq1$ 的 $\Theta_{3,3,6k+4}$ 连通、无孪生点，且 $\dim G=2$。
+\end{bookresult}
+\begin{itemize}
+\item 两个足够：地址公式由两条候选路线取最短。
+\item 若所有距离不同，度三顶点的邻居只剩两个距离可选，矛盾。
+\item 孪生点会迫使三角形或四边形；这里都没有。
+\end{itemize}
+\note{到单个路标的距离在相邻点间相差至多 $1$；若地址不能重复，就只能少 $1$ 或多 $1$。无孪生点论证使用最小度至少 $2$。这份 Lean 声明只有几何结论。}
+\end{frame}
+% Manuscript: Section 1; definitions
+\begin{frame}{两种数值规则}
+\[
+(Lx)_v=\deg(v)x_v-\sum_{w\sim v}x_w,
+\]
+\[
+(Qx)_v=\deg(v)x_v+\sum_{w\sim v}x_w.
+\]
+\begin{itemize}
+\item $Mx=\lambda x$：图案只被整体缩放。
+\item 重数：同一 $\lambda$ 下的独立图案数。
+\item $\operatorname{mm}_M$：所有 $\lambda$ 的重数取最大。
+\end{itemize}
+\note{用单边图的 $(1,1)$ 与 $(1,-1)$ 解释特征向量。最大重数不是最大特征值的重数。矩阵实对称，因此几何重数等于代数重数。}
+\end{frame}
+% Manuscript: Section 1; AKS Section 9 Problem 30 p.27
+\begin{frame}{原问题：两个等式只留一个}
+\begin{block}{Alfuraidan--Khan--Sauras-Altuzarra}
+是否有无限多个互不同构、连通且无孪生点的图，恰好满足下面一个等式？
+\[
+\operatorname{mm}_L G=\dim G,\qquad
+\operatorname{mm}_Q G=\dim G.
+\]
+\end{block}
+\small arXiv:2610.26875v1，第 9 节第 30 题，第 27 页。
+
+孪生点满足 $N(p)\setminus\{q\}=N(q)\setminus\{p\}$，其中 $p\ne q$。
+\note{排除相邻与不相邻两种孪生点。原题不要求每个方向各给一个族。图的整体对称并未被排除。}
+\end{frame}
+% Manuscript: Theorem 1; Corollary 2
+\begin{frame}{原文的明确回答}
+\begin{block}{原文定理 1 与推论 2}
+$k\geq1$，$r=6k+4$，$G_k=\Theta_{3,3,r}$：
+\[
+(\dim G_k,\operatorname{mm}_L G_k,\operatorname{mm}_Q G_k)=(2,2,1).
+\]
+$L$ 的 $1,3$ 各二重，其余单重；$Q$ 全部单重。
+\end{block}
+阶数 $6k+9$ 互不相同，所以图两两不同构。
+
+\small 原文书面论证；\href{https://github.com/the-omega-institute/trureturing-requests/issues/39}{完整谱分类的形式化任务}。
+\note{这页给出原文完整结论，不能冒用存在性声明作为所有分句的验证。度量部分此前由 Knor--Sedlar--Škrekovski 分类，本文增添同时谱分类与分离。}
+\end{frame}
+\section{对称与递推}
+% Manuscript: Section 3; invariant subspaces
+\begin{frame}{整体对称，不是孪生点}
+交换 $(a,b)$ 与 $(c,d)$，把任意图案分成
+\[
+x=\frac{x+Sx}{2}+\frac{x-Sx}{2}.
+\]
+\begin{itemize}
+\item 对称部分：两条短路的数值相同。
+\item 反对称部分：数值相反，其他点全为零。
+\item 两部分各自保留在 $L,Q$ 的运算之下。
+\end{itemize}
+同一特征值的两个部分相遇，就会产生重复。
+\note{$S$ 是交换算子且 $S^2=I$。这份分解不是“图有孪生点”的推论，而是交换两个完整部件的结果。}
+\end{frame}
+% Manuscript: Section 3; antisymmetric restriction
+\begin{frame}{一个二乘二矩阵}
+统一写 $M_e=D-eA$：$e=1$ 给 $L$，$e=-1$ 给 $Q$。
+
+反对称图案在两条短路上为 $(B,C)$ 与 $(-B,-C)$：
+\[
+\begin{pmatrix}2&-e\\-e&2\end{pmatrix}.
+\]
+\begin{itemize}
+\item 特征值 $2-e,2+e$，也就是 $1,3$。
+\item 每个值各有一个反对称方向。
+\item 长路长度不影响这两个方向。
+\end{itemize}
+\note{直接代入 $(1,1)$ 和 $(1,-1)$ 检查两个特征值。终点的贡献由两条短路抵消。到这里还没有证明重数为二。}
+\end{frame}
+% Manuscript: Section 3 equations (short), (ends), (rec)
+\begin{frame}{长路只记住两个数}
+对称图案：端点 $A,D_0$，短路 $B,C$，长路 $Y_j$。
+\[
+t=e(2-\lambda),\qquad Y_{j+1}=tY_j-Y_{j-1}.
+\]
+\[
+\begin{aligned}
+tB&=A+C,&tC&=B+D_0,\\
+Y_1&=(t+e)A-2B,&Y_r&=D_0,\\
+Y_{r-1}&=(t+e)D_0-2C,&Y_0&=A.
+\end{aligned}
+\]
+初始值决定整条路；两端条件筛选允许的图案。
+\note{内部点度数为 $2$，把矩阵行改写就得到递推。两个端点度数为 $3$，所以不能直接套内部递推，必须保留这两条端点方程。}
+\end{frame}
+% Manuscript: Section 3.1; singular sequences
+\begin{frame}{六步与三步的周期}
+\[
+\begin{array}{c|l}
+t=1&A,s,s-A,-A,-s,A-s,A,s,\ldots\\
+t=-1&A,s,-A-s,A,s,-A-s,\ldots
+\end{array}
+\]
+\begin{itemize}
+\item 两端相容只依赖 $r\bmod6$。
+\item 当 $r=6k+4$，对称维数为：
+\end{itemize}
+\[
+\begin{array}{c|cc}&t=1&t=-1\\\hline L&1&1\\Q&0&0\end{array}
+\]
+\note{请听众由 $A,s$ 算出后四项。$Q$ 的特征值换算是 $\lambda=2+t$，而 $L$ 为 $\lambda=2-t$。表中写的是对称部分。}
+\end{frame}
+% Manuscript: Sections 3.1–3.2
+\begin{frame}{相遇解释二重，排除法完成证明}
+\begin{itemize}
+\item $L$ 的 $1,3$：一个反对称方向加一个对称方向。
+\item $Q$ 的 $1,3$：只有反对称方向。
+\item 还必须证明其他特征值不重复。
+\end{itemize}
+若 $t^2\ne1$，端点值 $(A,D_0)$ 决定整个图案。
+
+原文证明它们必须满足一个非零线性关系，因此对称特征空间至多一维。
+\note{这一排除步骤才让“找到重根”变成“列出全部重根”。附录写出关系和不能两系数同时消失的理由。}
+\end{frame}
+\section{分类与延伸}
+% Manuscript: Corollaries 3–4; Section 3.3
+\begin{frame}{六种余数的谱分类}
+\small 对所有 $r\geq3$，只列重复值；每个列出值二重。
+\[
+\begin{array}{c|cc|cc}
+r\bmod6&L&Q&\operatorname{mm}_L&\operatorname{mm}_Q\\\hline
+0&3&1&2&2\\1&3&3&2&2\\2&\varnothing&\varnothing&1&1\\
+3&1,3&1,3&2&2\\4&1,3&\varnothing&2&1\\5&\varnothing&\varnothing&1&1
+\end{array}
+\]
+$r\geq6$ 时 $\dim G=2$；$r=3,5$ 时 $\dim G=3$。
+
+\small 原文推论 3--4；\href{https://github.com/the-omega-institute/trureturing-requests/issues/40}{共享分类请求}。
+\note{这张表不是全谱。空集表示全部单重。先用 $r=10$ 找到余数四，再用 $r=9$ 比较两个等式都成立的情况。$r=4$ 的度量维数也是 $2$。}
+\end{frame}
+% Manuscript: Corollary 4; KSS Theorems 8,14; AKS Table 2
+\begin{frame}{不能漏掉的小例外}
+\begin{itemize}
+\item $r=3,5$：$\dim G=3$，两个最大重数均为 $2$。
+\item $r=2$：$L$ 只有 $3\pm\sqrt2$ 重复，各二重；$Q$ 单重。
+\item 恰好一个等式：$r=2$ 或 $r\equiv4\pmod6$，均为 $L$ 方向。
+\end{itemize}
+\small 度量例外来自 Knor--Sedlar--Škrekovski (2022)。
+$r=2$ 的总量已见 AKS 表 2 第二行。
+
+此子族没有 $Q$ 独有的分离，不代表所有图都没有。
+\note{强调小参数的度量例外不能由谱表读出。本文的谱分类扩展了已有度量分类。下一页的特征值二是另一个不同问题。}
+\end{frame}
+% Manuscript: Corollary 5; Paone–Paone Corollary 8.1
+\begin{frame}{特征值二：另一个周期}
+\[
+\operatorname{mult}_{Q(\Theta_{3,3,r})}(2)=
+\begin{cases}1,&r\equiv1\pmod4,\\0,&\text{其他情况},\end{cases}
+\qquad r\geq2.
+\]
+$e=-1,t=0$ 给出 $A,s,-A,-s,\ldots$。
+
+\begin{itemize}
+\item 四周期决定该特征值是否存在。
+\item 六周期决定 $1,3$ 是否重复。
+\end{itemize}
+\small 原文推论 5；Paone--Paone (2026) 推论 8.1 的特例。
+\href{https://github.com/the-omega-institute/trureturing-requests/issues/41}{特征值二请求}。
+\note{例如 $r=9$ 时特征值二单重，而 $1,3$ 都二重，并不矛盾。这里不是新的最大重数分类，而是此前公式的专门化。}
+\end{frame}
+% Manuscript: Corollary 6; Section 4
+\begin{frame}{每个点接一条相同的尾巴}
+给底图 $H$ 每个顶点接一条 $t\geq1$ 边的路径，得 $H_t$。
+\[
+\begin{array}{c|ccc}
+H&\dim H_t&\operatorname{mm}_L H_t&\operatorname{mm}_Q H_t\\\hline
+K_{1,3,3}&4&4&5\\
+K_2\vee(2K_2)&3&2&3
+\end{array}
+\]
+两族都连通、无孪生点，阶数随 $t$ 增长。
+
+\small 原文推论 6：专门化 AKS 底图、Jannesari 与 Feng--Wang 的度量工具、Cardoso 等的谱分块。
+\href{https://github.com/the-omega-institute/trureturing-requests/issues/42}{挂路径请求}。
+\note{$K_{1,3,3}$ 为完全三部图，分组大小 $1,3,3$。$K_2\vee(2K_2)$ 在两条不相交边外加入两个彼此相邻且连接原四点的顶点。每个根只有一条尾巴，不能说解决多分枝的第 33 题。}
+\end{frame}
+% Manuscript: Corollary 7; Section 5
+\begin{frame}{外部路标看不见模内部的区别}
+模 $M$：每个外部顶点与 $M$ 全连或全不连。
+
+$\rho(M)$：在 $M$ 内选路标，按截断至 $2$ 的诱导距离分辨所需的最小数目。
+\begin{block}{原文推论 7；此前模下界}
+连通图中的两两不交非空真模满足
+\[
+\dim G\geq\sum_i\rho(M_i).
+\]
+\end{block}
+\small Belmonte--Fomin--Golovach--Ramanujan (2016), Lemma 7。
+\href{https://github.com/the-omega-institute/trureturing-requests/issues/43}{模下界请求}。
+\note{不连通的诱导点对截断后距离也为 $2$。外部路标到模内各点距离相同；连通性保证模外存在公共邻居。各模不交才可加总。单点的 $\rho$ 为 $0$。}
+\end{frame}
+\section{精确证据与边界}
+% Manuscript: Section 5; Lean result conclusion
+\begin{frame}{公开 Lean 结论实际说什么？}
+\begin{bookresult}{infinite-separation}
+存在自然数序列 $n_i$ 与 $G_i$（顶点集 $\mathrm{Fin}(n_i)$），每个图连通、无孪生点，且恰好一个等式成立。若 $i\ne j$，则 $G_i,G_j$ 不同构。
+\end{bookresult}
+\begin{itemize}
+\item 结论是存在性；不指定重复特征值清单。
+\item 证明内部选择 theta 族与 $L$ 方向。
+\item 明确主族与全长度分类仍需分别比较。
+\end{itemize}
+\note{量词顺序是先存在阶数函数和图函数，再对所有自然数 $i$ 断言性质，以及对所有不同 $i,j$ 断言无同构。书中给出两个等式恰好一个成立的完整析取。}
+\end{frame}
+% Manuscript: Section 5; coverage table; bibliography
+\begin{frame}{贡献与边界}
+\begin{itemize}
+\item 第 30 题：肯定回答；挂路径还给出两个方向。
+\item 第 29 题：只分类 $\Theta_{3,3,r}$，不是所有三路长度。
+\item 未给出所有连通图的谱等式判别或指数计数改进。
+\item 有限计算 $2\leq r\leq40$ 支持论证，不替代全参数证明。
+\end{itemize}
+\note{完整分类来自书面的递推与端点论证；有限计算展示其预言，已有 Lean 结果则覆盖前面说明的几何与存在性结论。}
+\end{frame}
+% Manuscript: Reading sources; canonical shared requests
+\begin{frame}{沿同一个请求继续}
+\begin{itemize}
+\item \href{https://github.com/the-omega-institute/trureturing-requests/issues/39}{主族精确谱}与\href{https://github.com/the-omega-institute/trureturing-requests/issues/40}{全长度分类}。
+\item \href{https://github.com/the-omega-institute/trureturing-requests/issues/41}{特征值二}、\href{https://github.com/the-omega-institute/trureturing-requests/issues/42}{挂路径}、\href{https://github.com/the-omega-institute/trureturing-requests/issues/43}{模下界}。
+\item 贡献者 fork 的聚焦 PR 直接交上游 \texttt{dev}。
+\item 保留原作者与此前文献；合入后复核精确声明。
+\end{itemize}
+整体对称可以制造谱相遇，而无需孪生点。
+\note{请求只是工作协调，不是证明收据或积分。讲解与演示使用同一个结果范围，没有另一条重复队列。}
+\end{frame}
+\appendix
+\section{技术附录}
+% Manuscript: Section 3.2 equations (cont), (linear), (factor)
+\begin{frame}{排除隐藏重根的代数}
+\small
+$q=t^2-1\ne0$，$P=p_{r-1}(t)$，$R=p_{r-2}(t)$。
+\[
+(q+2P)D_0=\bigl(P((t+e)q-2t)-Rq\bigr)A.
+\]
+\[
+p_n^2+p_{n+1}^2-tp_np_{n+1}=1.
+\]
+若两个系数同时为零，则
+\[
+(t-2e)(t^2-1)(t^2+2et-1)=0.
+\]
+$t=2e$ 与 $P=-3/2$ 矛盾；二次因子的共轭根 $T$ 满足 $|T|>2$，递推增长与 $R=e$ 矛盾。
+\note{$p_0=1,p_1=t$。二次因子在有理数域不可约，所以 $p_{r-2}(t)-e$ 在一个根处为零会在共轭根处为零。对 $r\geq3$，次数下标 $r-2\geq1$ 保证绝对值大于 $1$。}
+\end{frame}
+% Manuscript: Section 4; rooted product proof
+\begin{frame}{为什么尾巴保持最大重数？}
+底图特征值 $\mu$ 产生块
+\[
+X(P_{t+1})+\mu E_{00},\qquad X=L,Q.
+\]
+\begin{itemize}
+\item 不可约三对角块：首坐标决定全向量，故谱单重。
+\item 块多项式为 $F(z)-\mu R(z)$。
+\item 相邻端点子式互素，故 $F,R$ 无共同根。
+\item 不同 $\mu$ 的块无谱相交；保留原来的重数。
+\end{itemize}
+\note{第一坐标为零会由行递推迫使所有坐标为零。两个不同 $\mu$ 若共享特征值，相减给出 $R=0$，继而 $F=0$，与互素性矛盾。}
+\end{frame}
+% Manuscript: Bibliography; sources
+\begin{frame}{主要来源}
+\footnotesize
+\begin{itemize}
+\item Ma--Zhang，第 2 版，2026；\href{https://mathesis-omega-research.apps.chrono-ai.fun/papers/aks2610-twin-free-theta-separation?version=2}{公开原文}，CC BY 4.0。
+\item Alfuraidan--Khan--Sauras-Altuzarra：arXiv:2610.26875v1，第 9 节第 30 题。
+\item Knor--Sedlar--Škrekovski (2022)：\href{https://doi.org/10.3390/math10142411}{10.3390/math10142411}。
+\item Paone--Paone (2026)，推论 8.1：\href{https://doi.org/10.5281/zenodo.21744051}{10.5281/zenodo.21744051}。
+\item 挂路径与模下界的全部来源和原文定位见双语书末。
+\end{itemize}
+\note{原论文题目为 A twin-free answer to Alfuraidan–Khan–Sauras-Altuzarra, arXiv:2610.26875v1, Section 9, Problem 30 (p. 27): a spectral extension of Knor–Sedlar–Škrekovski (2022)。保持版本与作者归属。}
+\end{frame}
+% Manuscript: exact public geometry and existential declarations only
+\FormalVerification
+\end{document}

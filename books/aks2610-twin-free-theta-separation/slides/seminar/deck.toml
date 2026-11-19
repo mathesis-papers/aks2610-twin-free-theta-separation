@@ -1,0 +1,12 @@
+kind = "academic"
+editions = ["zh", "en"]
+aspect = "4:3"
+structure_colour = "#0e2c8e"
+short_author = "H. Ma, W. Zhang"
+short_title = "Twin-free theta graphs"
+navigation_symbols = false
+date = "Public paper version 2 · 2026"
+
+[title]
+zh = "两个路标与两种谱重数"
+en = "Two landmarks and two spectral multiplicities"

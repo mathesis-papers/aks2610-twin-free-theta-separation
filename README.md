@@ -28,3 +28,44 @@ Haobo Ma, Wenlin Zhang (2026). A twin-free answer to Alfuraidan–Khan–Sauras-
 ## Contributions
 
 Original authors are listed above. Formalization contributors and attribution are retained in `formalization/nodes.json`; repository pull requests do not confer verification or credit. Submit formalization attempts through the Mathesis attempt path described in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+<!-- Mathesis generated repository guide; refresh with paper.py front. -->
+
+## Reading and materials
+
+[Paper site](https://papers.trureturing.org/aks2610-twin-free-theta-separation/) · [Frozen PDF](paper.pdf) · [Citation](CITATION.cff)
+
+[中文阅读](https://papers.trureturing.org/aks2610-twin-free-theta-separation/aks2610-twin-free-theta-separation/zh/) · [Read in English](https://papers.trureturing.org/aks2610-twin-free-theta-separation/aks2610-twin-free-theta-separation/en/)
+
+[Slides](https://papers.trureturing.org/aks2610-twin-free-theta-separation/aks2610-twin-free-theta-separation/slides/) ([sources](books/aks2610-twin-free-theta-separation/slides/)) · [Videos](https://papers.trureturing.org/aks2610-twin-free-theta-separation/aks2610-twin-free-theta-separation/films/) ([sources](books/aks2610-twin-free-theta-separation/films/))
+
+These are publication routes; available built materials are inventoried in [mathesis-materials.json](https://papers.trureturing.org/aks2610-twin-free-theta-separation/mathesis-materials.json).
+
+## Book and formalization
+
+Catalog formalization status above is separate from the statement comparisons below. A nearby declaration does not verify the complete written result.
+
+| Book result | Comparison with formal base | Compared declaration |
+|---|---|---|
+| `theta-geometry` | same | `D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaStructure.theta_metric_certificates` |
+| `theta-main` | variant | `D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaStructure.theta_metric_certificates` |
+| `explicit-family` | variant | `D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaSeparation.result` |
+| `residue-classification` | variant | `D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaSeparation.result` |
+| `all-lengths` | variant | `D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaSeparation.result` |
+| `signless-two` | none | — |
+| `rooted-paths` | variant | `D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaSeparation.result` |
+| `module-bound` | none | — |
+| `infinite-separation` | same | `D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaSeparation.result` |
+
+Book stage: **complete**; 0 pending claims. [Statement comparisons](.mathesis/REVIEW.md).
+
+## Repository map
+
+| Zone | Location |
+|---|---|
+| Paper record | `paper.json`, `CITATION.cff`, `paper.pdf`, `manuscript/`, `formalization/nodes.json`, `LICENSES/`, `.mathesis/` |
+| Content | `books/aks2610-twin-free-theta-separation/`: Chinese/English text, figures, visualizations, videos, slides, assets |
+| Machinery | Upstream and layer managed paths; update with `tbook template update` |
+| Repository front | This README, changelog, contribution guide, licence, project/site/pin configuration, `template.d/` |
+
+See [the enforced layout](docs/layer-mathesis/LAYOUT.md). Preparation run records and built outputs stay outside the committed tree.
