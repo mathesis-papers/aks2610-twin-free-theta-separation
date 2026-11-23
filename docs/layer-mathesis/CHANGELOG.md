@@ -1,5 +1,17 @@
 # Mathesis layer changelog
 
+## [0.7.6] - 2026-11-20
+
+- Make the LaTeX manuscript template general for papers and short notes. Standardize A4 typography and common mathematical environments while leaving sections, length and coverage tables to the argument. Support DOI, arXiv, ISBN and stable web-source references, with either an inline bibliography or BibTeX. Our own short notes use the template as their default reference.
+
+## [0.7.5] - 2026-11-20
+
+- Add the LaTeX manuscript skeleton for short notes (`manuscript/note.tex`) and its description (`MANUSCRIPT.md`): fixed layout, order of parts, the scope table and the verification-coverage paragraph.
+
+## [0.7.4] - 2026-11-19
+
+- Keep the real paper work ID separate from the repository name in integration fixtures. DOI-named repositories now exercise the same content-slug and request-registration checks as other papers.
+
 ## [0.7.3] - 2026-11-15
 
 - Present paper films with a readable bilingual heading, narration information and author credit. Keep proof sources expandable and preserve playback, downloads and language controls, while removing build instructions and internal book codes from the reader page. Adapt only Mathesis output; the upstream renderer and media contract remain unchanged.
