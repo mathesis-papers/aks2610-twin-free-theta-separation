@@ -2,8 +2,8 @@
   "schema": "trureturing-books.lock.v1",
   "repo": "the-omega-institute/trureturing",
   "branch": "dev",
-  "commit": "d9bb8a406783c5222849b798f3c2ab738f653d75",
-  "pinned_at": "2026-11-14T21:44:57Z",
+  "commit": "b05ceb497bd134559c3c0f84d925c1643f7c65cb",
+  "pinned_at": "2026-11-24T06:47:19Z",
   "declarations": {
     "D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaSeparation.result": {
       "module": "D5/S3/Combinatorics/SpectralGraph/TwinFreeThetaSeparation",
